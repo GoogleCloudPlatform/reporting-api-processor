@@ -1,0 +1,38 @@
+// Copyright 2022 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+package securityreport;
+
+option go_package = "./;securityreport";
+
+message DeprecationReport {
+    // name of API, e.g. websql
+    string id = 1;
+
+    // YYYY-MM-DD date format, e.g. "2020-01-01"
+    string anticipated_removal = 2;
+
+    // free form text, e.g. "WebSQL is deprecated and will be removed in Chrome 97 around January 2020"
+    string message = 3;
+
+    // where the call to the deprecated API happened, e.g. https://example.com/index.js
+    string source_file = 4;
+
+    // 1-based
+    int32 line_number = 5;
+
+    // 1-based
+    int32 column_number = 6;
+}

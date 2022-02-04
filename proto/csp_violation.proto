@@ -1,0 +1,55 @@
+// Copyright 2022 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+package securityreport;
+
+option go_package = "./;securityreport";
+
+message CSPReport {
+  // The URI of the document in which the violation occurred.
+  optional string document_uri = 4;
+
+  // The referrer of the document in which the violation occurred.
+  optional string referrer = 5;
+
+  // The URI of the resource that was blocked from loading by the
+  // Content Security Policy. If the blocked URI is from a different
+  // origin than the document-uri, then the blocked URI is truncated
+  // to contain just the scheme, host, and port.
+  optional string blocked_uri = 6;
+
+  // The name of the policy section that was violated.
+  optional string violated_directive = 7;
+
+  // The name of the policy directive that was violated.
+  optional string effective_directive = 15;
+
+  // The original policy as specified by the CSP HTTP header:
+  // Content-Security-Policy, X-Content-Security-Policy (IE),
+  // X-Webkit-CSP (old Safari, old Chrome).
+  optional string original_policy = 8;
+
+  // The URL of the resource where the violation occurred.
+  optional string source_file = 9;
+
+  // The line number in source-file on which the violation occurred, 1-based.
+  optional int32 line_number = 31;
+
+  // The column number in source-file on which the violation occurred, 1-based.
+  optional int32 column_number = 32;
+
+  // A snippet of the rejected script (first 40 bytes).
+  optional string script_sample = 21;
+}

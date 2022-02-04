@@ -1,0 +1,56 @@
+// Copyright 2022 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+package securityreport;
+
+import "csp_violation.proto";
+import "deprecation_report.proto";
+
+option go_package = "./;securityreport";
+
+message SecurityReport {
+  // This report's checksum is computed according to the subtype of the
+  // report. Used for deduplication.
+  string report_checksum = 1;
+  // When was this report generated? (milliseconds)
+  int64 report_time = 2;
+  // Number of times we saw this report (always 1 until aggregation happens)
+  int64 count_per_batch = 3;
+  // Unparsed UA + parsed browser name and major version
+  string user_agent = 4;
+  string browser_name = 5;
+  int32 browser_major_version = 6;
+
+  // Policy disposition
+  enum Disposition {
+    DISPOSITION_UNKNOWN = 0;
+    REPORTING = 1;
+    ENFORCED = 2;
+  }
+  Disposition disposition = 7;
+
+  // this field will hold an extension of the base SecurityReport,
+  // only one extension can be set for any given request
+  oneof ReportExtension {
+    CSPReport csp_report = 8;
+    DeprecationReport deprecation_report = 9;
+
+    // TODO(saldiaz): define COOP and COEP messages
+    // CoopReport coop_report = 10;
+    // CoepReport coep_report = 11;
+  }
+}
+
+
