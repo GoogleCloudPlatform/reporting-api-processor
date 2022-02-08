@@ -27,12 +27,11 @@ message SecurityReport {
   // When was this report generated? (milliseconds)
   int64 report_time = 2;
   // Number of times we saw this report (always 1 until aggregation happens)
-  int64 count_per_batch = 3;
+  int64 report_count = 3;
   // Unparsed UA + parsed browser name and major version
   string user_agent = 4;
   string browser_name = 5;
   int32 browser_major_version = 6;
-
   // Policy disposition
   enum Disposition {
     DISPOSITION_UNKNOWN = 0;
@@ -40,17 +39,14 @@ message SecurityReport {
     ENFORCED = 2;
   }
   Disposition disposition = 7;
-
   // this field will hold an extension of the base SecurityReport,
   // only one extension can be set for any given request
   oneof ReportExtension {
-    CSPReport csp_report = 8;
+    CspReport csp_report = 8;
     DeprecationReport deprecation_report = 9;
-
     // TODO(saldiaz): define COOP and COEP messages
     // CoopReport coop_report = 10;
     // CoepReport coep_report = 11;
   }
 }
-
 

@@ -17,39 +17,30 @@ package securityreport;
 
 option go_package = "./;securityreport";
 
-message CSPReport {
+message CspReport {
   // The URI of the document in which the violation occurred.
-  optional string document_uri = 4;
-
+   string document_uri = 4;
   // The referrer of the document in which the violation occurred.
-  optional string referrer = 5;
-
+   string referrer = 5;
   // The URI of the resource that was blocked from loading by the
   // Content Security Policy. If the blocked URI is from a different
   // origin than the document-uri, then the blocked URI is truncated
   // to contain just the scheme, host, and port.
-  optional string blocked_uri = 6;
-
+   string blocked_uri = 6;
   // The name of the policy section that was violated.
-  optional string violated_directive = 7;
-
+   string violated_directive = 7;
   // The name of the policy directive that was violated.
-  optional string effective_directive = 15;
-
+   string effective_directive = 15;
   // The original policy as specified by the CSP HTTP header:
   // Content-Security-Policy, X-Content-Security-Policy (IE),
   // X-Webkit-CSP (old Safari, old Chrome).
-  optional string original_policy = 8;
-
+   string original_policy = 8;
   // The URL of the resource where the violation occurred.
-  optional string source_file = 9;
-
+   string source_file = 9;
   // The line number in source-file on which the violation occurred, 1-based.
-  optional int32 line_number = 31;
-
+   int32 line_number = 31;
   // The column number in source-file on which the violation occurred, 1-based.
-  optional int32 column_number = 32;
-
+   int32 column_number = 32;
   // A snippet of the rejected script (first 40 bytes).
-  optional string script_sample = 21;
+   string script_sample = 21;
 }

@@ -18,21 +18,16 @@ package securityreport;
 option go_package = "./;securityreport";
 
 message DeprecationReport {
-    // name of API, e.g. websql
-    string id = 1;
-
-    // YYYY-MM-DD date format, e.g. "2020-01-01"
-    string anticipated_removal = 2;
-
-    // free form text, e.g. "WebSQL is deprecated and will be removed in Chrome 97 around January 2020"
-    string message = 3;
-
-    // where the call to the deprecated API happened, e.g. https://example.com/index.js
-    string source_file = 4;
-
-    // 1-based
-    int32 line_number = 5;
-
-    // 1-based
-    int32 column_number = 6;
+  // name of API, e.g. websql
+  string id = 1;
+  // YYYY-MM-DD date format, e.g. "2020-01-01"
+  string anticipated_removal = 2;
+  // free form text, e.g. "WebSQL is deprecated and will be removed in Chrome 97 around January 2020"
+  string message = 3;
+  // where the call to the deprecated API happened, e.g. https://example.com/index.js
+  string source_file = 4;
+  // 1-based
+  int32 line_number = 5;
+  // 1-based
+  int32 column_number = 6;
 }
