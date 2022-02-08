@@ -31,10 +31,10 @@ import (
 )
 
 const (
-	tableName    = "security_report"
-	columnFamily = "description"
-	bufSize      = 10
-	interval     = 10 * time.Second
+	tableName      = "security_report"
+	columnFamily   = "description"
+	btWriteBufSize = 1000
+	interval       = 10 * time.Second
 )
 
 var (
@@ -43,7 +43,7 @@ var (
 )
 
 func init() {
-	reportCh = make(chan *securityreport.SecurityReport)
+	reportCh = make(chan *securityreport.SecurityReport, btWriteBufSize*10)
 }
 
 func main() {
@@ -125,9 +125,14 @@ func reportWriter(ctx context.Context, ch chan *securityreport.SecurityReport) {
 	for {
 		select {
 		case <-t.C:
-			muts := make([]*bigtable.Mutation, bufSize)
-			keys := make([]string, bufSize)
-			size := min(len(ch), bufSize)
+			size := min(len(ch), btWriteBufSize)
+			logger.Debug().Msgf("buffered %v reports", size)
+			if size == 0 {
+				logger.Debug().Msgf("no reports buffered. skipping.")
+				continue
+			}
+			muts := make([]*bigtable.Mutation, size)
+			keys := make([]string, size)
 			for i := 0; i < size; i++ {
 				muts[i] = bigtable.NewMutation()
 				r := <-ch
@@ -138,11 +143,10 @@ func reportWriter(ctx context.Context, ch chan *securityreport.SecurityReport) {
 			if err != nil {
 				logger.Error().Msgf("could not apply bulk row mutation: %v", err)
 			}
-			if rowErrs != nil {
-				for _, rowErr := range rowErrs {
-					logger.Error().Msgf("error writing row: %v", rowErr)
-				}
+			for _, rowErr := range rowErrs {
+				logger.Error().Msgf("error writing row: %v", rowErr)
 			}
+			logger.Info().Msgf("wrote %v reports", size)
 		}
 	}
 }
