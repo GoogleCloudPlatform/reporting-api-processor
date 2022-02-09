@@ -91,7 +91,6 @@ func healthzHandler(c echo.Context) error {
 }
 
 func mainHandler(c echo.Context) error {
-	c.Echo().Logger.Printf("main")
 	r := c.Request()
 	contentType := r.Header.Get("Content-Type")
 	if contentType != "application/reports+json" {
