@@ -18,9 +18,9 @@ import (
 	"context"
 	"encoding/json"
 	"io"
+	"log"
 	"net/http"
 	"os"
-	"strconv"
 	"time"
 
 	"cloud.google.com/go/bigtable"
@@ -50,7 +50,7 @@ func main() {
 	project := os.Getenv("BT_PROJECT")
 	instance := os.Getenv("BT_INSTANCE")
 	if project == "" || instance == "" {
-		logger.Fatal().Msgf("either of environment variables BT_PROJECT or BT_INSTANCE is empty.")
+		log.Fatalf("either of environment variables BT_PROJECT or BT_INSTANCE is empty.")
 	}
 
 	ctx := context.Background()
@@ -58,21 +58,23 @@ func main() {
 	bt, err = bigtable.NewClient(ctx, project, instance)
 	defer func() {
 		if err := bt.Close(); err != nil {
-			logger.Fatal().Msgf("failed to close Cloud BigTable client: %v", err)
+			log.Fatalf("failed to close Cloud BigTable client: %v", err)
 		}
 	}()
 	if err != nil {
-		logger.Fatal().Msgf("failed to create BigTable client: %v", err)
+		log.Fatalf("failed to create BigTable client: %v", err)
 	}
 
 	go reportWriter(ctx, reportCh)
 
 	e := echo.New()
+	e.Debug = true
 	e.HideBanner = true
 	e.HidePort = true
 	// In order to handle Reporting API, the reporting endpoint needs to handle CORS
 	e.Use(middleware.CORSWithConfig(middleware.DefaultCORSConfig))
 	e.POST("/main", mainHandler)
+	e.POST("/default", mainHandler)
 	e.GET("/_healthz", healthzHandler)
 
 	port := os.Getenv("PORT")
@@ -80,7 +82,7 @@ func main() {
 		port = "8080"
 	}
 	if err := e.Start(":" + port); err != nil {
-		logger.Fatal().Msgf("failure occured on launching HTTP server: %v", err)
+		log.Fatalf("failure occured on launching HTTP server: %v", err)
 	}
 }
 
@@ -89,17 +91,19 @@ func healthzHandler(c echo.Context) error {
 }
 
 func mainHandler(c echo.Context) error {
+	c.Echo().Logger.Printf("main")
 	r := c.Request()
 	contentType := r.Header.Get("Content-Type")
 	if contentType != "application/reports+json" {
-		logger.Error().Msgf("Content-Type header is not application/reports+json: %v", r.Header)
+		c.Echo().Logger.Errorf("Content-Type header is not application/reports+json: %v", r.Header)
 		return c.String(http.StatusBadRequest, "Content-Type not supported. The Content-Type must be application/reports+json.")
 	}
 
 	data, err := io.ReadAll(r.Body)
 	if err != nil {
-		logger.Error().Msgf("error on reading data: %v", err)
+		c.Echo().Logger.Errorf("error on reading data: %v", err)
 	}
+	c.Echo().Logger.Debug(string(data))
 	if err := r.Body.Close(); err != nil {
 		return err
 	}
@@ -107,12 +111,13 @@ func mainHandler(c echo.Context) error {
 	var buf []map[string]interface{}
 	err = json.Unmarshal(data, &buf)
 	if err != nil {
-		logger.Error().Msgf("error on parsing JSON: %v", err)
+		c.Echo().Logger.Errorf("error on parsing JSON: %v", err)
 		return c.String(http.StatusInternalServerError, err.Error())
 	}
+	c.Echo().Logger.Debugf("queueing %v reports", len(buf))
 	for _, b := range buf {
 		// TODO(yoshifumi): Extrace values with keys and store them into SecurityReport
-		reportCh <- mapToSecurityReport(b)
+		reportCh <- mapToSecurityReport(c.Logger(), b)
 	}
 
 	return c.String(http.StatusOK, "OK")
@@ -126,9 +131,9 @@ func reportWriter(ctx context.Context, ch chan *securityreport.SecurityReport) {
 		select {
 		case <-t.C:
 			size := min(len(ch), btWriteBufSize)
-			logger.Debug().Msgf("buffered %v reports", size)
+			// log.Printf("buffered %v reports", size)
 			if size == 0 {
-				logger.Debug().Msgf("no reports buffered. skipping.")
+				// log.Printf("no reports buffered. skipping.")
 				continue
 			}
 			muts := make([]*bigtable.Mutation, size)
@@ -141,109 +146,13 @@ func reportWriter(ctx context.Context, ch chan *securityreport.SecurityReport) {
 			}
 			rowErrs, err := table.ApplyBulk(ctx, keys, muts)
 			if err != nil {
-				logger.Error().Msgf("could not apply bulk row mutation: %v", err)
+				log.Printf("could not apply bulk row mutation: %v", err)
 			}
 			for _, rowErr := range rowErrs {
-				logger.Error().Msgf("error writing row: %v", rowErr)
+				log.Printf("error writing row: %v", rowErr)
 			}
-			logger.Info().Msgf("wrote %v reports", size)
+			log.Printf("wrote %v reports", size)
 		}
-	}
-}
-
-func mapToSecurityReport(m map[string]interface{}) *securityreport.SecurityReport {
-	sr := &securityreport.SecurityReport{}
-
-	sr.ReportChecksum = strconv.Itoa(0)
-	sr.ReportCount = int64(1)
-	sr.Disposition = securityreport.SecurityReport_DISPOSITION_UNKNOWN
-	if rt, ok := m["report_time"].(int64); ok {
-		sr.ReportTime = rt
-	}
-	if ua, ok := m["user_agent"].(string); ok {
-		sr.UserAgent = ua
-	}
-	var typ string
-	var body map[string]interface{}
-	var ok bool
-	if typ, ok = m["type"].(string); !ok {
-		logger.Error().Msgf("unexpected report type: %v", m)
-		return sr
-	}
-	if body, ok = m["body"].(map[string]interface{}); !ok {
-		logger.Error().Msgf("unexpected report type: %v", m)
-		return sr
-	}
-	switch typ {
-	case "csp-violation":
-		csp := &securityreport.CspReport{}
-		csp.DocumentUri = body["documentURL"].(string)
-		csp.Referrer = body["referrer"].(string)
-		csp.BlockedUri = body["blockedURL"].(string)
-		csp.ViolatedDirective = body["violatedDirective"].(string)
-		csp.EffectiveDirective = body["effectiveDirective"].(string)
-		csp.SourceFile = body["sourceFile"].(string)
-		csp.LineNumber = body["lineNumber"].(int32)
-		csp.ColumnNumber = body["columnNumber"].(int32)
-		csp.ScriptSample = body["scriptSample"].(string)
-		sr.ReportExtension = &securityreport.SecurityReport_CspReport{CspReport: csp}
-
-		switch body["disposition"].(string) {
-		case "enforce":
-			sr.Disposition = securityreport.SecurityReport_ENFORCED
-		case "report":
-			sr.Disposition = securityreport.SecurityReport_REPORTING
-		default:
-		}
-	case "deprecation":
-		dep := &securityreport.DeprecationReport{}
-		dep.Id = body["id"].(string)
-		dep.AnticipatedRemoval = body["anticipatedRemoval"].(string)
-		dep.LineNumber = body["lineNumber"].(int32)
-		dep.ColumnNumber = body["columnNumber"].(int32)
-		dep.Message = body["message"].(string)
-		dep.SourceFile = body["sourceFile"].(string)
-		sr.ReportExtension = &securityreport.SecurityReport_DeprecationReport{DeprecationReport: dep}
-	}
-	return sr
-}
-
-func generateRowKey(r *securityreport.SecurityReport) string {
-	ext := "csp"
-	if r.GetDeprecationReport() != nil {
-		ext = "dep"
-	}
-	// row key format: report_extension#checksum#timestamp
-	return ext + "#" + r.GetReportChecksum() + "#" + strconv.FormatInt(r.GetReportTime(), 10)
-}
-
-func setSecurityReport(m *bigtable.Mutation, r *securityreport.SecurityReport) {
-	now := bigtable.Now()
-	m.Set(columnFamily, "report_checksum", now, []byte(strconv.Itoa(0))) // report_checksum is 0 before aggregation
-	m.Set(columnFamily, "report_count", now, []byte(strconv.Itoa(1)))    // report_count must be 1 before aggregation
-	m.Set(columnFamily, "user_agent", now, []byte(r.GetUserAgent()))
-	m.Set(columnFamily, "browser_name", now, []byte(r.GetBrowserName()))
-	m.Set(columnFamily, "browser_major_version", now, []byte(strconv.FormatInt(int64(r.GetBrowserMajorVersion()), 10)))
-	m.Set(columnFamily, "disposition", now, []byte(r.GetDisposition().String()))
-	if csp := r.GetCspReport(); csp != nil {
-		m.Set(columnFamily, "document_uri", now, []byte(csp.GetDocumentUri()))
-		m.Set(columnFamily, "referrer", now, []byte(csp.GetReferrer()))
-		m.Set(columnFamily, "blocked_uri", now, []byte(csp.GetBlockedUri()))
-		m.Set(columnFamily, "violated_directive", now, []byte(csp.GetViolatedDirective()))
-		m.Set(columnFamily, "effective_directive", now, []byte(csp.GetEffectiveDirective()))
-		m.Set(columnFamily, "original_policy", now, []byte(csp.GetOriginalPolicy()))
-		m.Set(columnFamily, "source_file", now, []byte(csp.GetSourceFile()))
-		m.Set(columnFamily, "line_number", now, []byte(strconv.FormatInt(int64(csp.GetLineNumber()), 10)))
-		m.Set(columnFamily, "column_number", now, []byte(strconv.FormatInt(int64(csp.GetColumnNumber()), 10)))
-		m.Set(columnFamily, "script_sample", now, []byte(csp.GetScriptSample()))
-	}
-	if dep := r.GetDeprecationReport(); dep != nil {
-		m.Set(columnFamily, "id", now, []byte(dep.GetId()))
-		m.Set(columnFamily, "anticipated_removal", now, []byte(dep.GetAnticipatedRemoval()))
-		m.Set(columnFamily, "message", now, []byte(dep.GetMessage()))
-		m.Set(columnFamily, "source_file", now, []byte(dep.GetSourceFile()))
-		m.Set(columnFamily, "line_number", now, []byte(strconv.FormatInt(int64(dep.GetLineNumber()), 10)))
-		m.Set(columnFamily, "column_number", now, []byte(strconv.FormatInt(int64(dep.GetColumnNumber()), 10)))
 	}
 }
 
