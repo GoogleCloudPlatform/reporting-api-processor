@@ -16,6 +16,7 @@ package main
 
 import (
 	"strconv"
+	"time"
 
 	"cloud.google.com/go/bigtable"
 	securityreport "github.com/GoogleCloudPlatform/reporting-api-processor/forwarder/proto"
@@ -24,12 +25,19 @@ import (
 
 func mapToSecurityReport(logger echo.Logger, m map[string]interface{}) *securityreport.SecurityReport {
 	sr := &securityreport.SecurityReport{}
+	now := time.Now().UnixMilli()
 
 	sr.ReportChecksum = strconv.Itoa(0)
 	sr.ReportCount = int64(1)
 	sr.Disposition = securityreport.SecurityReport_DISPOSITION_UNKNOWN
-	if rt, ok := m["report_time"].(int64); ok {
-		sr.ReportTime = rt
+
+	// the report has "age" field that is the offset from the report's timestamp.
+	// https://w3c.github.io/reporting/#serialize-reports
+	//
+	// NOTE: currently the report doesn't have "timestamp" field, so use server side
+	// current time.
+	if age, ok := m["age"].(float64); ok {
+		sr.ReportTime = now - int64(age)
 	}
 	if ua, ok := m["user_agent"].(string); ok {
 		sr.UserAgent = ua
@@ -78,13 +86,13 @@ func mapToSecurityReport(logger echo.Logger, m map[string]interface{}) *security
 		} else {
 			logger.Warnf("unexpected sourceFile: %#v", body["sourceFile"])
 		}
-		if ln, ok := body["lineNumber"].(int32); ok {
-			csp.LineNumber = ln
+		if ln, ok := body["lineNumber"].(float64); ok {
+			csp.LineNumber = int32(ln)
 		} else {
 			logger.Warnf("unexpected lineNumber: %#v", body["lineNumber"])
 		}
-		if cn, ok := body["columnNumber"].(int32); ok {
-			csp.ColumnNumber = cn
+		if cn, ok := body["columnNumber"].(float64); ok {
+			csp.ColumnNumber = int32(cn)
 		} else {
 			logger.Warnf("unexpected columnNumber: %#v", body["columnNumber"])
 		}
@@ -112,15 +120,15 @@ func mapToSecurityReport(logger echo.Logger, m map[string]interface{}) *security
 		if ar, ok := body["anticipatedRemoval"].(string); ok {
 			dep.AnticipatedRemoval = ar
 		} else {
-			logger.Warnf("unexpected anticipatedReval: %#v", body["anticipatedRemoval"])
+			logger.Warnf("unexpected anticipatedRemoval: %#v", body["anticipatedRemoval"])
 		}
-		if ln, ok := body["lineNumber"].(int32); ok {
-			dep.LineNumber = ln
+		if ln, ok := body["lineNumber"].(float64); ok {
+			dep.LineNumber = int32(ln)
 		} else {
 			logger.Warnf("unexpected lineNumber: %#v", body["lineNumber"])
 		}
-		if cn, ok := body["columnNumber"].(int32); ok {
-			dep.ColumnNumber = cn
+		if cn, ok := body["columnNumber"].(float64); ok {
+			dep.ColumnNumber = int32(cn)
 		} else {
 			logger.Warnf("unexpected columnNumber: %#v", body["columnNumber"])
 		}
@@ -152,6 +160,7 @@ func setSecurityReport(m *bigtable.Mutation, r *securityreport.SecurityReport) {
 	now := bigtable.Now()
 	m.Set(columnFamily, "report_checksum", now, []byte(strconv.Itoa(0))) // report_checksum is 0 before aggregation
 	m.Set(columnFamily, "report_count", now, []byte(strconv.Itoa(1)))    // report_count must be 1 before aggregation
+	m.Set(columnFamily, "report_time", now, []byte(strconv.FormatInt(int64(r.GetReportTime()), 10)))
 	m.Set(columnFamily, "user_agent", now, []byte(r.GetUserAgent()))
 	m.Set(columnFamily, "browser_name", now, []byte(r.GetBrowserName()))
 	m.Set(columnFamily, "browser_major_version", now, []byte(strconv.FormatInt(int64(r.GetBrowserMajorVersion()), 10)))
