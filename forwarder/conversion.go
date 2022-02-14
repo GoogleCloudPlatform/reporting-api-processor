@@ -15,6 +15,8 @@
 package main
 
 import (
+	"crypto/sha256"
+	"encoding/json"
 	"strconv"
 	"time"
 
@@ -23,11 +25,21 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+const (
+	tableName    = "security_report"
+	columnFamily = "description"
+	column       = "data"
+)
+
 func mapToSecurityReport(logger echo.Logger, m map[string]interface{}) *securityreport.SecurityReport {
 	sr := &securityreport.SecurityReport{}
 	now := time.Now().UnixMilli()
-
-	sr.ReportChecksum = strconv.Itoa(0)
+	deserialized, err := json.Marshal(m)
+	if err != nil {
+		logger.Errorf("failed to marshal map[string]interface{}: %v", m)
+	}
+	checksum := sha256.Sum256(deserialized)
+	sr.ReportChecksum = string(checksum[:])
 	sr.ReportCount = int64(1)
 	sr.Disposition = securityreport.SecurityReport_DISPOSITION_UNKNOWN
 
@@ -158,31 +170,6 @@ func generateRowKey(r *securityreport.SecurityReport) string {
 
 func setSecurityReport(m *bigtable.Mutation, r *securityreport.SecurityReport) {
 	now := bigtable.Now()
-	m.Set(columnFamily, "report_checksum", now, []byte(strconv.Itoa(0))) // report_checksum is 0 before aggregation
-	m.Set(columnFamily, "report_count", now, []byte(strconv.Itoa(1)))    // report_count must be 1 before aggregation
-	m.Set(columnFamily, "report_time", now, []byte(strconv.FormatInt(int64(r.GetReportTime()), 10)))
-	m.Set(columnFamily, "user_agent", now, []byte(r.GetUserAgent()))
-	m.Set(columnFamily, "browser_name", now, []byte(r.GetBrowserName()))
-	m.Set(columnFamily, "browser_major_version", now, []byte(strconv.FormatInt(int64(r.GetBrowserMajorVersion()), 10)))
-	m.Set(columnFamily, "disposition", now, []byte(r.GetDisposition().String()))
-	if csp := r.GetCspReport(); csp != nil {
-		m.Set(columnFamily, "document_uri", now, []byte(csp.GetDocumentUri()))
-		m.Set(columnFamily, "referrer", now, []byte(csp.GetReferrer()))
-		m.Set(columnFamily, "blocked_uri", now, []byte(csp.GetBlockedUri()))
-		m.Set(columnFamily, "violated_directive", now, []byte(csp.GetViolatedDirective()))
-		m.Set(columnFamily, "effective_directive", now, []byte(csp.GetEffectiveDirective()))
-		m.Set(columnFamily, "original_policy", now, []byte(csp.GetOriginalPolicy()))
-		m.Set(columnFamily, "source_file", now, []byte(csp.GetSourceFile()))
-		m.Set(columnFamily, "line_number", now, []byte(strconv.FormatInt(int64(csp.GetLineNumber()), 10)))
-		m.Set(columnFamily, "column_number", now, []byte(strconv.FormatInt(int64(csp.GetColumnNumber()), 10)))
-		m.Set(columnFamily, "script_sample", now, []byte(csp.GetScriptSample()))
-	}
-	if dep := r.GetDeprecationReport(); dep != nil {
-		m.Set(columnFamily, "id", now, []byte(dep.GetId()))
-		m.Set(columnFamily, "anticipated_removal", now, []byte(dep.GetAnticipatedRemoval()))
-		m.Set(columnFamily, "message", now, []byte(dep.GetMessage()))
-		m.Set(columnFamily, "source_file", now, []byte(dep.GetSourceFile()))
-		m.Set(columnFamily, "line_number", now, []byte(strconv.FormatInt(int64(dep.GetLineNumber()), 10)))
-		m.Set(columnFamily, "column_number", now, []byte(strconv.FormatInt(int64(dep.GetColumnNumber()), 10)))
-	}
+	serialized := []byte(r.String())
+	m.Set(columnFamily, column, now, serialized)
 }

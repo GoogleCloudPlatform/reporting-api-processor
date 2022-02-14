@@ -31,8 +31,6 @@ import (
 )
 
 const (
-	tableName      = "security_report"
-	columnFamily   = "description"
 	btWriteBufSize = 1000
 	interval       = 10 * time.Second
 )
