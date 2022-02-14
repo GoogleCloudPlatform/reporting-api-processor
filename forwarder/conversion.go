@@ -16,13 +16,16 @@ package main
 
 import (
 	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
+	"log"
 	"strconv"
 	"time"
 
 	"cloud.google.com/go/bigtable"
 	securityreport "github.com/GoogleCloudPlatform/reporting-api-processor/forwarder/proto"
 	"github.com/labstack/echo/v4"
+	"google.golang.org/protobuf/proto"
 )
 
 const (
@@ -31,15 +34,24 @@ const (
 	column       = "data"
 )
 
+func mapToSHA256HexString(m map[string]interface{}) (string, error) {
+	deserialized, err := json.Marshal(m)
+	if err != nil {
+		return "", err
+	}
+	checksum := sha256.Sum256(deserialized)
+	return hex.EncodeToString(checksum[:]), nil
+}
+
 func mapToSecurityReport(logger echo.Logger, m map[string]interface{}) *securityreport.SecurityReport {
 	sr := &securityreport.SecurityReport{}
 	now := time.Now().UnixMilli()
-	deserialized, err := json.Marshal(m)
+	checksum, err := mapToSHA256HexString(m)
 	if err != nil {
 		logger.Errorf("failed to marshal map[string]interface{}: %v", m)
+		return nil
 	}
-	checksum := sha256.Sum256(deserialized)
-	sr.ReportChecksum = string(checksum[:])
+	sr.ReportChecksum = checksum
 	sr.ReportCount = int64(1)
 	sr.Disposition = securityreport.SecurityReport_DISPOSITION_UNKNOWN
 
@@ -170,6 +182,10 @@ func generateRowKey(r *securityreport.SecurityReport) string {
 
 func setSecurityReport(m *bigtable.Mutation, r *securityreport.SecurityReport) {
 	now := bigtable.Now()
-	serialized := []byte(r.String())
+	serialized, err := proto.Marshal(r)
+	if err != nil {
+		log.Printf("failed to serialize SecurityReport: %v", err)
+		return
+	}
 	m.Set(columnFamily, column, now, serialized)
 }
