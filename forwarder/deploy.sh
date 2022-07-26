@@ -24,6 +24,7 @@ gcloud run deploy ${SERVICE} \
 --image $(ko publish .) \
 --platform=managed \
 --allow-unauthenticated \
+--no-cpu-throttling \
 --set-env-vars "BT_PROJECT=${PROJECT}" \
 --set-env-vars "BT_INSTANCE=security-report-instance"
 
