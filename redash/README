@@ -1,0 +1,5 @@
+## How to set up
+
+1. create `.env` file
+2. run `docker-compose run --rm server create_db`
+3. run `docker-compose up`
