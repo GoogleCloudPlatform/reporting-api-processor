@@ -50,3 +50,13 @@ services:
     links:
       - server:redash
     restart: always
+  jsonserver:
+    build:
+      context: ./jsonserver
+      dockerfile: Dockerfile
+    ports:
+      - "3333:3333"
+    volumes:
+      - $PWD/jsonserver:/var/data:ro
+    restart: always
+
