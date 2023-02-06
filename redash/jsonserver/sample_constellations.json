@@ -1,369 +1,1343 @@
 [
-{
-  "refactoring": "CSP_EVAL",
-  "metadata": {
-    "reportCount": "87",
-    "latestSeenTimestamp": "1662643013653",
-    "sample": {
-      "reportChecksum": "0ec65b4515d953c2722331e23fe4750380a676993b19120782823dc375976b37",
-      "reportTime": "1662643013653",
-      "reportCount": "26",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "REPORTING",
-      "cspReport": {
-        "documentUri": "https://fi.google.com/about/phones/",
-        "referrer": "https://example.org/",
-        "blockedUri": "eval",
-        "effectiveDirective": "script-src",
-        "lineNumber": 1,
-        "columnNumber": 96
-      }
-    },
-    "reports": ["0a14436ff8c76808dc0f3571553ec06687aa8a3a3d522c2dfc4b44fdc6ed37ab", "04f688ddfc3762cce0a05f24f2cf31fc070149f26cf6fc6e7b3113f98492cb88", "6e39089fff483edb6a24716266d2fb33f1bfbb63d67cf56e4b76196e7efd3af4", "392e80c9bfb9ea1d9b027f4de90f2c7416e4bc065e8cf1b7ca232c713b41e495", "0ec65b4515d953c2722331e23fe4750380a676993b19120782823dc375976b37"]
-  }
-},
-{
-  "id": "4302",
-  "feature": "DEPRECATION",
-  "metadata": {
-    "reportCount": "2",
-    "latestSeenTimestamp": "1662641580816",
-    "name": "4302",
-    "sample": {
-      "reportChecksum": "5cde6452f95c4fcb8ab7d1559fe75cfd6a523646046c1d94bbc5e78ee366113a",
-      "reportTime": "1662641580816",
+  {
+    "id": "https://example.com/script.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1645002999103",
+      "name": "https://example.com/script.js",
+      "sample": {
+        "reportChecksum": "8274dd63f32fd5209ae72c12d852a6ad4f0acdb7a1799fbd715e1e196e5720b5",
+        "reportTime": "1645002999103",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://reporting-api-demo-otel.glitch.me/page",
+          "referrer": "https://glitch.com/",
+          "blockedUri": "https://example.com/script.js",
+          "effectiveDirective": "script-src-elem"
+        }
+      },
+      "reports": [
+        "8274dd63f32fd5209ae72c12d852a6ad4f0acdb7a1799fbd715e1e196e5720b5"
+      ]
+    }
+  },
+  {
+    "id": "trusted-types-sink",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "13",
+      "latestSeenTimestamp": "1662643024048",
+      "name": "trusted-types-sink",
+      "sample": {
+        "reportChecksum": "a8bd176d308bd5e2a77c6adae74eb39be2cdfa43ba62c7a7aec8d6f08083fc56",
+        "reportTime": "1662643024048",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://store.google.com/tw/product/pixel_6_pro/?hl\u003dzh-TW",
+          "referrer": "https://example.org/",
+          "blockedUri": "trusted-types-sink",
+          "sourceFile": "https://www.gstatic.com/store/base/airkit.min.js",
+          "effectiveDirective": "require-trusted-types-for",
+          "lineNumber": 8,
+          "columnNumber": 5025
+        }
+      },
+      "reports": [
+        "b663bc3008f2f681ed2b567ff0d92e717b24b3f274f5a0ad6e2c5e3b75e9f9db",
+        "31b8f835294383ab4a5dee366edbc9aaa555b5054469999adb9ada7bb85233e3",
+        "7769ca5a35281301aff880a4d5785647db050ea3a4f40bd953503587943a37e7",
+        "e1e45275fcb27cffe7a30c01102c25ee7b49c65c9d5877d3165f5d40ad92820a",
+        "a8bd176d308bd5e2a77c6adae74eb39be2cdfa43ba62c7a7aec8d6f08083fc56",
+        "248f23d1f0ac82d8c3c8e5f4af85302ee15e268b185cfe1343fdebf09d2d6654",
+        "1d869d86d4027c6014d174f6d15c8d3ad945f0fab450de3f8ef2ea776c7710b6",
+        "f26749df9b24d8de641808a409d545428520b2c15bd28da4618110e2f11c5641",
+        "0c9c9c0c4013791967610153dfd42ba9f8bafe761236b04ec802ae1763d3c4c3"
+      ]
+    }
+  },
+  {
+    "id": "4302",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
       "reportCount": "2",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "deprecationReport": {
-        "id": "4302",
-        "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts."
-      }
-    },
-    "reports": ["5cde6452f95c4fcb8ab7d1559fe75cfd6a523646046c1d94bbc5e78ee366113a"]
-  }
-},
-{
-  "id": "345",
-  "feature": "DEPRECATION",
-  "metadata": {
-    "reportCount": "5",
-    "latestSeenTimestamp": "1662641831942",
-    "name": "345",
-    "sample": {
-      "reportChecksum": "6bb7e887cae0cc71a1ef4ded39b87982df321012cb8a1de2f1035db9ae95fbe5",
-      "reportTime": "1662641831942",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "deprecationReport": {
-        "id": "345",
-        "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts.",
-        "sourceFile": "https://pay.google.com/gp/w/home/activity?sctid\u003d7454553010299587",
-        "lineNumber": 44,
-        "columnNumber": 84
-      }
-    },
-    "reports": ["44c20c85188f7600a70cf0650ed79f2d282026ef8e013289fdb6da9b01b6c1bd", "674f052533cda878febe373058b999f5ece716a5f5ff0065d4e7c86e5d21e968", "6bb7e887cae0cc71a1ef4ded39b87982df321012cb8a1de2f1035db9ae95fbe5", "1c7da6c57f46b55f0829921613f3134f7b22ae3c2d23fa8c0053ea4e9e3c5e51", "82770a48cd0b35325c24fc388d7ce59ad35749e7d4858fff50f05946c62ae0c2"]
-  }
-},
-{
-  "id": "https://www.youtube.com/iframe_api",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "7",
-    "latestSeenTimestamp": "1662643024049",
-    "name": "https://www.youtube.com/iframe_api",
-    "sample": {
-      "reportChecksum": "d46b3bd64a41b317c5277b24d12866289098e2099014d093192c7fa8ad842bc2",
-      "reportTime": "1662643024049",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "ENFORCED",
-      "cspReport": {
-        "documentUri": "https://store.google.com/tw/product/pixel_6_pro/?hl\u003dzh-TW",
-        "referrer": "https://example.org/",
-        "blockedUri": "https://www.youtube.com/iframe_api",
-        "sourceFile": "https://www.gstatic.com/store/base/airkit.min.js",
-        "effectiveDirective": "script-src-elem",
-        "lineNumber": 8,
-        "columnNumber": 5101
-      }
-    },
-    "reports": ["29be8dbe65b0e746a35bf7d35f82ea54f5094083b59240fc2d0402096270f95b", "76e29ad79718c149734e896524f5c4f6a6c6df4418e81ac4201be56766635a91", "c6a116483eed57d4ea1d5f35a1dacb3c3bfb9d198dbc04762a8e1b2c0a5d20b2", "9dab6a5efae6a609c598ab8e805c0d4af498c2309e4d6b40f883faa9af2962e9", "8f2a16ea2de1fc944cef5e1246ae68836f9774f68fca70ff64d1401317edf86c", "d46b3bd64a41b317c5277b24d12866289098e2099014d093192c7fa8ad842bc2", "343aec814f89b6c8ab3d9113d9645c889a41c2452bb132b682290255e65f721c"]
-  }
-},
-{
-  "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1662642579174",
-    "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
-    "sample": {
-      "reportChecksum": "08b36d294cf2be2a89c9eae99a22e5f01a9e39fdbc36f03abc9932707ad57e30",
-      "reportTime": "1662642579174",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "ENFORCED",
-      "cspReport": {
-        "documentUri": "https://www.waze.com/ads/es/get-started/",
-        "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
-        "effectiveDirective": "img-src"
-      }
-    },
-    "reports": ["08b36d294cf2be2a89c9eae99a22e5f01a9e39fdbc36f03abc9932707ad57e30"]
-  }
-},
-{
-  "id": "https://payments.google.com/payments/v4/js/integrator.js",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "4",
-    "latestSeenTimestamp": "1662642478213",
-    "name": "https://payments.google.com/payments/v4/js/integrator.js",
-    "sample": {
-      "reportChecksum": "c773f9c467df7add268b424203d452c7232e5f700d58c2ed80bf9fbdbbb90d18",
-      "reportTime": "1662642478213",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "REPORTING",
-      "cspReport": {
-        "documentUri": "https://ads.google.com/aw/billing/billingsetups?ocid\u003d327542343\u0026euid\u003d63636782\u0026__u\u003d8730137918\u0026uscid\u003d327542343\u0026__c\u003d9264064207\u0026authuser\u003d0\u0026__e\u003d5890755770",
-        "referrer": "https://ads.google.com/nav/selectaccount?euid\u003d63636782\u0026__u\u003d8730137918\u0026authuser\u003d0\u0026dst\u003d/aw/billing/summary\u0026pli\u003d1",
-        "blockedUri": "https://payments.google.com/payments/v4/js/integrator.js",
-        "effectiveDirective": "script-src-elem"
-      }
-    },
-    "reports": ["d8c4a8b145748e8a900742d288daaab238c8a06817c3a0174786bc20ac7ea930", "e56664657e9dde61ebe978e2af14705ffc9cc67c66012b1ebd64c855bf615051", "34e0d34bd30de68fd7dc85161071c7f0702eaa4aba1a13871f8d8a73d932db4c", "c773f9c467df7add268b424203d452c7232e5f700d58c2ed80bf9fbdbbb90d18"]
-  }
-},
-{
-  "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1662642579171",
-    "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
-    "sample": {
-      "reportChecksum": "07f214578b6dff1b6718e4f776143baa3b3d2cccf7f1301148f45e644d5fffce",
-      "reportTime": "1662642579171",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "ENFORCED",
-      "cspReport": {
-        "documentUri": "https://www.waze.com/ads/es/get-started/",
-        "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
-        "effectiveDirective": "img-src"
-      }
-    },
-    "reports": ["07f214578b6dff1b6718e4f776143baa3b3d2cccf7f1301148f45e644d5fffce"]
-  }
-},
-{
-  "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1662642510618",
-    "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
-    "sample": {
-      "reportChecksum": "461b474918dcc043b2282356f16c4dc1bcd745ffd69e75f654886d8b612170be",
-      "reportTime": "1662642510618",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "ENFORCED",
-      "cspReport": {
-        "documentUri": "https://www.waze.com/ads/es/get-started/",
-        "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
-        "effectiveDirective": "img-src"
-      }
-    },
-    "reports": ["461b474918dcc043b2282356f16c4dc1bcd745ffd69e75f654886d8b612170be"]
-  }
-},
-{
-  "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1662642510645",
-    "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
-    "sample": {
-      "reportChecksum": "46e8dd50dcc04f46fd1fd3db274adb76ec637bdea4d9a64092100ed82be1abb6",
-      "reportTime": "1662642510645",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "ENFORCED",
-      "cspReport": {
-        "documentUri": "https://www.waze.com/ads/es/get-started/",
-        "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
-        "effectiveDirective": "img-src"
-      }
-    },
-    "reports": ["46e8dd50dcc04f46fd1fd3db274adb76ec637bdea4d9a64092100ed82be1abb6"]
-  }
-},
-{
-  "id": "trusted-types-sink",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "13",
-    "latestSeenTimestamp": "1662643024048",
-    "name": "trusted-types-sink",
-    "sample": {
-      "reportChecksum": "a8bd176d308bd5e2a77c6adae74eb39be2cdfa43ba62c7a7aec8d6f08083fc56",
-      "reportTime": "1662643024048",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "REPORTING",
-      "cspReport": {
-        "documentUri": "https://store.google.com/tw/product/pixel_6_pro/?hl\u003dzh-TW",
-        "referrer": "https://example.org/",
-        "blockedUri": "trusted-types-sink",
-        "sourceFile": "https://www.gstatic.com/store/base/airkit.min.js",
-        "effectiveDirective": "require-trusted-types-for",
-        "lineNumber": 8,
-        "columnNumber": 5025
-      }
-    },
-    "reports": ["31b8f835294383ab4a5dee366edbc9aaa555b5054469999adb9ada7bb85233e3", "b663bc3008f2f681ed2b567ff0d92e717b24b3f274f5a0ad6e2c5e3b75e9f9db", "0c9c9c0c4013791967610153dfd42ba9f8bafe761236b04ec802ae1763d3c4c3", "a8bd176d308bd5e2a77c6adae74eb39be2cdfa43ba62c7a7aec8d6f08083fc56", "e1e45275fcb27cffe7a30c01102c25ee7b49c65c9d5877d3165f5d40ad92820a", "248f23d1f0ac82d8c3c8e5f4af85302ee15e268b185cfe1343fdebf09d2d6654", "7769ca5a35281301aff880a4d5785647db050ea3a4f40bd953503587943a37e7", "f26749df9b24d8de641808a409d545428520b2c15bd28da4618110e2f11c5641", "1d869d86d4027c6014d174f6d15c8d3ad945f0fab450de3f8ef2ea776c7710b6"]
-  }
-},
-{
-  "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1662642489018",
-    "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
-    "sample": {
-      "reportChecksum": "ec469c1c7484a5607ec025593510d54341a3c2ae495dc48714b4d83ddca41bd4",
-      "reportTime": "1662642489018",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "ENFORCED",
-      "cspReport": {
-        "documentUri": "https://www.waze.com/ads/es/get-started/",
-        "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
-        "effectiveDirective": "img-src"
-      }
-    },
-    "reports": ["ec469c1c7484a5607ec025593510d54341a3c2ae495dc48714b4d83ddca41bd4"]
-  }
-},
-{
-  "id": "https://example.com/script.js",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1645002999103",
-    "name": "https://example.com/script.js",
-    "sample": {
-      "reportChecksum": "8274dd63f32fd5209ae72c12d852a6ad4f0acdb7a1799fbd715e1e196e5720b5",
-      "reportTime": "1645002999103",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-      "disposition": "ENFORCED",
-      "cspReport": {
-        "documentUri": "https://reporting-api-demo-otel.glitch.me/page",
-        "referrer": "https://glitch.com/",
-        "blockedUri": "https://example.com/script.js",
-        "effectiveDirective": "script-src-elem"
-      }
-    },
-    "reports": ["8274dd63f32fd5209ae72c12d852a6ad4f0acdb7a1799fbd715e1e196e5720b5"]
-  }
-},
-{
-  "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1662642489064",
-    "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
-    "sample": {
-      "reportChecksum": "82e1af54f04799a9fcaabe2402bd42a66ca16afb0d7e1b8044450136541f8fc0",
-      "reportTime": "1662642489064",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "ENFORCED",
-      "cspReport": {
-        "documentUri": "https://www.waze.com/ads/es/get-started/",
-        "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
-        "effectiveDirective": "img-src"
-      }
-    },
-    "reports": ["82e1af54f04799a9fcaabe2402bd42a66ca16afb0d7e1b8044450136541f8fc0"]
-  }
-},
-{
-  "id": "57",
-  "feature": "DEPRECATION",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1662641429639",
-    "name": "57",
-    "sample": {
-      "reportChecksum": "b9e99470544b86a56dab3b3e77e53e34989902b34bebca993ad3f895b1e850ba",
-      "reportTime": "1662641429639",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "deprecationReport": {
-        "id": "57",
-        "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts.",
-        "sourceFile": "https://tough-pretty-viscose.glitch.me/script.js",
-        "lineNumber": 17,
-        "columnNumber": 8
-      }
-    },
-    "reports": ["b9e99470544b86a56dab3b3e77e53e34989902b34bebca993ad3f895b1e850ba"]
-  }
-},
-{
-  "id": "PrefixedStorageInfo",
-  "feature": "DEPRECATION",
-  "metadata": {
-    "reportCount": "1",
-    "latestSeenTimestamp": "1645003010083",
-    "name": "PrefixedStorageInfo",
-    "sample": {
-      "reportChecksum": "a69182ec85fd1a4c565123b43d9674390e0194a3c6c1e2cbf5312ed87e713ced",
-      "reportTime": "1645003010083",
-      "reportCount": "1",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-      "deprecationReport": {
-        "id": "PrefixedStorageInfo",
-        "message": "\u0027window.webkitStorageInfo\u0027 is deprecated. Please use \u0027navigator.webkitTemporaryStorage\u0027 or \u0027navigator.webkitPersistentStorage\u0027 instead.",
-        "sourceFile": "https://reporting-api-demo-otel.glitch.me/script.js",
-        "lineNumber": 4,
-        "columnNumber": 8
-      }
-    },
-    "reports": ["a69182ec85fd1a4c565123b43d9674390e0194a3c6c1e2cbf5312ed87e713ced"]
-  }
-},
-{
-  "id": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
-  "refactoring": "CSP_URL",
-  "metadata": {
-    "reportCount": "2",
-    "latestSeenTimestamp": "1662642498190",
-    "name": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
-    "sample": {
-      "reportChecksum": "bfe1bf2b1b5fb48f2298e54c8c5e61ba0164e824aec3dbaacdc3a20c70b2e56c",
-      "reportTime": "1662642498190",
+      "latestSeenTimestamp": "1662641580816",
+      "name": "4302",
+      "sample": {
+        "reportChecksum": "5cde6452f95c4fcb8ab7d1559fe75cfd6a523646046c1d94bbc5e78ee366113a",
+        "reportTime": "1662641580816",
+        "reportCount": "2",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "4302",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts."
+        }
+      },
+      "reports": [
+        "5cde6452f95c4fcb8ab7d1559fe75cfd6a523646046c1d94bbc5e78ee366113a"
+      ]
+    }
+  },
+  {
+    "id": "57",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
       "reportCount": "2",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
-      "disposition": "REPORTING",
-      "cspReport": {
-        "documentUri": "https://console.googletagservices.com/pubconsole/overlay.html",
-        "blockedUri": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
-        "sourceFile": "https://console.googletagservices.com/pubconsole/overlay.html",
-        "effectiveDirective": "script-src-elem",
-        "lineNumber": 21,
-        "columnNumber": 16
-      }
-    },
-    "reports": ["bfe1bf2b1b5fb48f2298e54c8c5e61ba0164e824aec3dbaacdc3a20c70b2e56c"]
+      "latestSeenTimestamp": "1662643307992",
+      "name": "57",
+      "sample": {
+        "reportChecksum": "492f3c35382cd1a884f55d0f5318f858c566d070a242e210392eb8c0b2232203",
+        "reportTime": "1662643307992",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "57",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts.",
+          "sourceFile": "https://www.gstatic.com/_/pantheon/_/js/k\u003dpantheon.pantheon_module_set.en_US.gt4x9l6BRx8.O/ck\u003dpantheon.pantheon_module_set.4MVQU54tLSQ.L.W.O/am\u003dqIvvBV7fpQue4QHGN432KhwFAIRZwAiynEYAbJEQQGwBApPzD2ggFDG7AoEBBwg/d\u003d0/im\u003d1/rs\u003dADqnUbMfGH28jRxx4SLaNHTVXUzfsHrB_w/m\u003dsy19,sy1b,sy1a,sy1d,sy1c,sy2q,sy3s,sy1e,sy3o,sy5e,sy3t,sy40,sy3x,sy3w,sy10,sy1g,sy1h,sy18,sy16,sy17,sy5f,sy3z,sy7k,sy2t,sy3y,sylw,syny,sy1f,sy1t,sy1v,sy20,sy2c,sy15,sy72,sy7j,sy7o,sy7p,sy7q,sy7r,sy7v,sy19u,sy1i,sy1u,sy21,sy22,sy23,sy13,sy25,sy27,sy28,sy29,sy2b,sy2d,sy2e,sy2f,sy7l,sy7n,sy7s,sy7t,syb7,sygm,syrp,sy19j,sy19t,syf,syg,pm_error_service,sy11,sy12,sy14,sy24,sy26,sy2a,sy2g,sy2h,sy2i,sy2j,sy2k,sy2m,sy2n,sy7m,syb6,syro,syrq,sy19v,sy1bk,pm_pangolin_sandbox,sy1bd,sy1bc,pm_sandbox_route_module",
+          "lineNumber": 1291,
+          "columnNumber": 8
+        }
+      },
+      "reports": [
+        "492f3c35382cd1a884f55d0f5318f858c566d070a242e210392eb8c0b2232203",
+        "b9e99470544b86a56dab3b3e77e53e34989902b34bebca993ad3f895b1e850ba"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642579174",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+      "sample": {
+        "reportChecksum": "08b36d294cf2be2a89c9eae99a22e5f01a9e39fdbc36f03abc9932707ad57e30",
+        "reportTime": "1662642579174",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "08b36d294cf2be2a89c9eae99a22e5f01a9e39fdbc36f03abc9932707ad57e30"
+      ]
+    }
+  },
+  {
+    "id": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "2",
+      "latestSeenTimestamp": "1662642498190",
+      "name": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+      "sample": {
+        "reportChecksum": "bfe1bf2b1b5fb48f2298e54c8c5e61ba0164e824aec3dbaacdc3a20c70b2e56c",
+        "reportTime": "1662642498190",
+        "reportCount": "2",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://console.googletagservices.com/pubconsole/overlay.html",
+          "blockedUri": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+          "sourceFile": "https://console.googletagservices.com/pubconsole/overlay.html",
+          "effectiveDirective": "script-src-elem",
+          "lineNumber": 21,
+          "columnNumber": 16
+        }
+      },
+      "reports": [
+        "bfe1bf2b1b5fb48f2298e54c8c5e61ba0164e824aec3dbaacdc3a20c70b2e56c"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642579171",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+      "sample": {
+        "reportChecksum": "07f214578b6dff1b6718e4f776143baa3b3d2cccf7f1301148f45e644d5fffce",
+        "reportTime": "1662642579171",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "07f214578b6dff1b6718e4f776143baa3b3d2cccf7f1301148f45e644d5fffce"
+      ]
+    }
+  },
+  {
+    "id": "https://www.youtube.com/iframe_api",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "7",
+      "latestSeenTimestamp": "1662643024049",
+      "name": "https://www.youtube.com/iframe_api",
+      "sample": {
+        "reportChecksum": "d46b3bd64a41b317c5277b24d12866289098e2099014d093192c7fa8ad842bc2",
+        "reportTime": "1662643024049",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://store.google.com/tw/product/pixel_6_pro/?hl\u003dzh-TW",
+          "referrer": "https://example.org/",
+          "blockedUri": "https://www.youtube.com/iframe_api",
+          "sourceFile": "https://www.gstatic.com/store/base/airkit.min.js",
+          "effectiveDirective": "script-src-elem",
+          "lineNumber": 8,
+          "columnNumber": 5101
+        }
+      },
+      "reports": [
+        "76e29ad79718c149734e896524f5c4f6a6c6df4418e81ac4201be56766635a91",
+        "29be8dbe65b0e746a35bf7d35f82ea54f5094083b59240fc2d0402096270f95b",
+        "343aec814f89b6c8ab3d9113d9645c889a41c2452bb132b682290255e65f721c",
+        "d46b3bd64a41b317c5277b24d12866289098e2099014d093192c7fa8ad842bc2",
+        "c6a116483eed57d4ea1d5f35a1dacb3c3bfb9d198dbc04762a8e1b2c0a5d20b2",
+        "9dab6a5efae6a609c598ab8e805c0d4af498c2309e4d6b40f883faa9af2962e9",
+        "8f2a16ea2de1fc944cef5e1246ae68836f9774f68fca70ff64d1401317edf86c"
+      ]
+    }
+  },
+  {
+    "id": "57",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "2",
+      "latestSeenTimestamp": "1662643307992",
+      "name": "57",
+      "sample": {
+        "reportChecksum": "492f3c35382cd1a884f55d0f5318f858c566d070a242e210392eb8c0b2232203",
+        "reportTime": "1662643307992",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "57",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts.",
+          "sourceFile": "https://www.gstatic.com/_/pantheon/_/js/k\u003dpantheon.pantheon_module_set.en_US.gt4x9l6BRx8.O/ck\u003dpantheon.pantheon_module_set.4MVQU54tLSQ.L.W.O/am\u003dqIvvBV7fpQue4QHGN432KhwFAIRZwAiynEYAbJEQQGwBApPzD2ggFDG7AoEBBwg/d\u003d0/im\u003d1/rs\u003dADqnUbMfGH28jRxx4SLaNHTVXUzfsHrB_w/m\u003dsy19,sy1b,sy1a,sy1d,sy1c,sy2q,sy3s,sy1e,sy3o,sy5e,sy3t,sy40,sy3x,sy3w,sy10,sy1g,sy1h,sy18,sy16,sy17,sy5f,sy3z,sy7k,sy2t,sy3y,sylw,syny,sy1f,sy1t,sy1v,sy20,sy2c,sy15,sy72,sy7j,sy7o,sy7p,sy7q,sy7r,sy7v,sy19u,sy1i,sy1u,sy21,sy22,sy23,sy13,sy25,sy27,sy28,sy29,sy2b,sy2d,sy2e,sy2f,sy7l,sy7n,sy7s,sy7t,syb7,sygm,syrp,sy19j,sy19t,syf,syg,pm_error_service,sy11,sy12,sy14,sy24,sy26,sy2a,sy2g,sy2h,sy2i,sy2j,sy2k,sy2m,sy2n,sy7m,syb6,syro,syrq,sy19v,sy1bk,pm_pangolin_sandbox,sy1bd,sy1bc,pm_sandbox_route_module",
+          "lineNumber": 1291,
+          "columnNumber": 8
+        }
+      },
+      "reports": [
+        "492f3c35382cd1a884f55d0f5318f858c566d070a242e210392eb8c0b2232203",
+        "b9e99470544b86a56dab3b3e77e53e34989902b34bebca993ad3f895b1e850ba"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642489018",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+      "sample": {
+        "reportChecksum": "ec469c1c7484a5607ec025593510d54341a3c2ae495dc48714b4d83ddca41bd4",
+        "reportTime": "1662642489018",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "ec469c1c7484a5607ec025593510d54341a3c2ae495dc48714b4d83ddca41bd4"
+      ]
+    }
+  },
+  {
+    "id": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "2",
+      "latestSeenTimestamp": "1662642498190",
+      "name": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+      "sample": {
+        "reportChecksum": "bfe1bf2b1b5fb48f2298e54c8c5e61ba0164e824aec3dbaacdc3a20c70b2e56c",
+        "reportTime": "1662642498190",
+        "reportCount": "2",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://console.googletagservices.com/pubconsole/overlay.html",
+          "blockedUri": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+          "sourceFile": "https://console.googletagservices.com/pubconsole/overlay.html",
+          "effectiveDirective": "script-src-elem",
+          "lineNumber": 21,
+          "columnNumber": 16
+        }
+      },
+      "reports": [
+        "bfe1bf2b1b5fb48f2298e54c8c5e61ba0164e824aec3dbaacdc3a20c70b2e56c"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642579174",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+      "sample": {
+        "reportChecksum": "08b36d294cf2be2a89c9eae99a22e5f01a9e39fdbc36f03abc9932707ad57e30",
+        "reportTime": "1662642579174",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "08b36d294cf2be2a89c9eae99a22e5f01a9e39fdbc36f03abc9932707ad57e30"
+      ]
+    }
+  },
+  {
+    "id": "345",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "5",
+      "latestSeenTimestamp": "1662641831942",
+      "name": "345",
+      "sample": {
+        "reportChecksum": "6bb7e887cae0cc71a1ef4ded39b87982df321012cb8a1de2f1035db9ae95fbe5",
+        "reportTime": "1662641831942",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "345",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts.",
+          "sourceFile": "https://pay.google.com/gp/w/home/activity?sctid\u003d7454553010299587",
+          "lineNumber": 44,
+          "columnNumber": 84
+        }
+      },
+      "reports": [
+        "674f052533cda878febe373058b999f5ece716a5f5ff0065d4e7c86e5d21e968",
+        "44c20c85188f7600a70cf0650ed79f2d282026ef8e013289fdb6da9b01b6c1bd",
+        "6bb7e887cae0cc71a1ef4ded39b87982df321012cb8a1de2f1035db9ae95fbe5",
+        "82770a48cd0b35325c24fc388d7ce59ad35749e7d4858fff50f05946c62ae0c2",
+        "1c7da6c57f46b55f0829921613f3134f7b22ae3c2d23fa8c0053ea4e9e3c5e51"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642489018",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+      "sample": {
+        "reportChecksum": "ec469c1c7484a5607ec025593510d54341a3c2ae495dc48714b4d83ddca41bd4",
+        "reportTime": "1662642489018",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "ec469c1c7484a5607ec025593510d54341a3c2ae495dc48714b4d83ddca41bd4"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642489064",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+      "sample": {
+        "reportChecksum": "82e1af54f04799a9fcaabe2402bd42a66ca16afb0d7e1b8044450136541f8fc0",
+        "reportTime": "1662642489064",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "82e1af54f04799a9fcaabe2402bd42a66ca16afb0d7e1b8044450136541f8fc0"
+      ]
+    }
+  },
+  {
+    "id": "https://www.youtube.com/iframe_api",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "7",
+      "latestSeenTimestamp": "1662643024049",
+      "name": "https://www.youtube.com/iframe_api",
+      "sample": {
+        "reportChecksum": "d46b3bd64a41b317c5277b24d12866289098e2099014d093192c7fa8ad842bc2",
+        "reportTime": "1662643024049",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://store.google.com/tw/product/pixel_6_pro/?hl\u003dzh-TW",
+          "referrer": "https://example.org/",
+          "blockedUri": "https://www.youtube.com/iframe_api",
+          "sourceFile": "https://www.gstatic.com/store/base/airkit.min.js",
+          "effectiveDirective": "script-src-elem",
+          "lineNumber": 8,
+          "columnNumber": 5101
+        }
+      },
+      "reports": [
+        "29be8dbe65b0e746a35bf7d35f82ea54f5094083b59240fc2d0402096270f95b",
+        "343aec814f89b6c8ab3d9113d9645c889a41c2452bb132b682290255e65f721c",
+        "d46b3bd64a41b317c5277b24d12866289098e2099014d093192c7fa8ad842bc2",
+        "76e29ad79718c149734e896524f5c4f6a6c6df4418e81ac4201be56766635a91",
+        "c6a116483eed57d4ea1d5f35a1dacb3c3bfb9d198dbc04762a8e1b2c0a5d20b2",
+        "9dab6a5efae6a609c598ab8e805c0d4af498c2309e4d6b40f883faa9af2962e9",
+        "8f2a16ea2de1fc944cef5e1246ae68836f9774f68fca70ff64d1401317edf86c"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642510645",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+      "sample": {
+        "reportChecksum": "46e8dd50dcc04f46fd1fd3db274adb76ec637bdea4d9a64092100ed82be1abb6",
+        "reportTime": "1662642510645",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "46e8dd50dcc04f46fd1fd3db274adb76ec637bdea4d9a64092100ed82be1abb6"
+      ]
+    }
+  },
+  {
+    "feature": "CSP",
+    "refactoring": "CSP_EVAL",
+    "metadata": {
+      "reportCount": "187",
+      "latestSeenTimestamp": "1662643285094",
+      "sample": {
+        "reportChecksum": "00fbd798124af5e2771c7d5951a133acc24e828dddbaba937516de22e48c2d0c",
+        "reportTime": "1662643285094",
+        "reportCount": "26",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://fi.google.com/account?pli\u003d1",
+          "referrer": "https://example.org/",
+          "blockedUri": "eval",
+          "effectiveDirective": "script-src",
+          "lineNumber": 1,
+          "columnNumber": 96
+        }
+      },
+      "reports": [
+        "04f688ddfc3762cce0a05f24f2cf31fc070149f26cf6fc6e7b3113f98492cb88",
+        "d1f22e7a8067b16459303066a5e99fdb72c9be761a38920f2b607dce56f6e459",
+        "6e39089fff483edb6a24716266d2fb33f1bfbb63d67cf56e4b76196e7efd3af4",
+        "22f5e27325332c3c092bb3b4d1131f0460a2f64765f2c97881e1fecc04c08c03",
+        "09133d49d76e84035b04440ca954a44c7905926131d9948f4aca94c0599b5ba5",
+        "13a2f60c52e3e603282a79e6992ee061e38e40d60c42ccabee7068093dd53b20",
+        "024c5ddc3f18069f4d99a2bd18af562645abb8c2c488655534ed0a5a9cc974bc",
+        "0a14436ff8c76808dc0f3571553ec06687aa8a3a3d522c2dfc4b44fdc6ed37ab",
+        "392e80c9bfb9ea1d9b027f4de90f2c7416e4bc065e8cf1b7ca232c713b41e495",
+        "0ec65b4515d953c2722331e23fe4750380a676993b19120782823dc375976b37",
+        "00fbd798124af5e2771c7d5951a133acc24e828dddbaba937516de22e48c2d0c"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642579171",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+      "sample": {
+        "reportChecksum": "07f214578b6dff1b6718e4f776143baa3b3d2cccf7f1301148f45e644d5fffce",
+        "reportTime": "1662642579171",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "07f214578b6dff1b6718e4f776143baa3b3d2cccf7f1301148f45e644d5fffce"
+      ]
+    }
+  },
+  {
+    "id": "345",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "5",
+      "latestSeenTimestamp": "1662641831942",
+      "name": "345",
+      "sample": {
+        "reportChecksum": "6bb7e887cae0cc71a1ef4ded39b87982df321012cb8a1de2f1035db9ae95fbe5",
+        "reportTime": "1662641831942",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "345",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts.",
+          "sourceFile": "https://pay.google.com/gp/w/home/activity?sctid\u003d7454553010299587",
+          "lineNumber": 44,
+          "columnNumber": 84
+        }
+      },
+      "reports": [
+        "44c20c85188f7600a70cf0650ed79f2d282026ef8e013289fdb6da9b01b6c1bd",
+        "1c7da6c57f46b55f0829921613f3134f7b22ae3c2d23fa8c0053ea4e9e3c5e51",
+        "674f052533cda878febe373058b999f5ece716a5f5ff0065d4e7c86e5d21e968",
+        "82770a48cd0b35325c24fc388d7ce59ad35749e7d4858fff50f05946c62ae0c2",
+        "6bb7e887cae0cc71a1ef4ded39b87982df321012cb8a1de2f1035db9ae95fbe5"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642510618",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+      "sample": {
+        "reportChecksum": "461b474918dcc043b2282356f16c4dc1bcd745ffd69e75f654886d8b612170be",
+        "reportTime": "1662642510618",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "461b474918dcc043b2282356f16c4dc1bcd745ffd69e75f654886d8b612170be"
+      ]
+    }
+  },
+  {
+    "feature": "CSP",
+    "refactoring": "CSP_EVAL",
+    "metadata": {
+      "reportCount": "187",
+      "latestSeenTimestamp": "1662643285094",
+      "sample": {
+        "reportChecksum": "00fbd798124af5e2771c7d5951a133acc24e828dddbaba937516de22e48c2d0c",
+        "reportTime": "1662643285094",
+        "reportCount": "26",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://fi.google.com/account?pli\u003d1",
+          "referrer": "https://example.org/",
+          "blockedUri": "eval",
+          "effectiveDirective": "script-src",
+          "lineNumber": 1,
+          "columnNumber": 96
+        }
+      },
+      "reports": [
+        "04f688ddfc3762cce0a05f24f2cf31fc070149f26cf6fc6e7b3113f98492cb88",
+        "22f5e27325332c3c092bb3b4d1131f0460a2f64765f2c97881e1fecc04c08c03",
+        "0ec65b4515d953c2722331e23fe4750380a676993b19120782823dc375976b37",
+        "6e39089fff483edb6a24716266d2fb33f1bfbb63d67cf56e4b76196e7efd3af4",
+        "00fbd798124af5e2771c7d5951a133acc24e828dddbaba937516de22e48c2d0c",
+        "13a2f60c52e3e603282a79e6992ee061e38e40d60c42ccabee7068093dd53b20",
+        "09133d49d76e84035b04440ca954a44c7905926131d9948f4aca94c0599b5ba5",
+        "392e80c9bfb9ea1d9b027f4de90f2c7416e4bc065e8cf1b7ca232c713b41e495",
+        "0a14436ff8c76808dc0f3571553ec06687aa8a3a3d522c2dfc4b44fdc6ed37ab",
+        "024c5ddc3f18069f4d99a2bd18af562645abb8c2c488655534ed0a5a9cc974bc",
+        "d1f22e7a8067b16459303066a5e99fdb72c9be761a38920f2b607dce56f6e459"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642510645",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+      "sample": {
+        "reportChecksum": "46e8dd50dcc04f46fd1fd3db274adb76ec637bdea4d9a64092100ed82be1abb6",
+        "reportTime": "1662642510645",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "46e8dd50dcc04f46fd1fd3db274adb76ec637bdea4d9a64092100ed82be1abb6"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642489064",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+      "sample": {
+        "reportChecksum": "82e1af54f04799a9fcaabe2402bd42a66ca16afb0d7e1b8044450136541f8fc0",
+        "reportTime": "1662642489064",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "82e1af54f04799a9fcaabe2402bd42a66ca16afb0d7e1b8044450136541f8fc0"
+      ]
+    }
+  },
+  {
+    "id": "PrefixedStorageInfo",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1645003010083",
+      "name": "PrefixedStorageInfo",
+      "sample": {
+        "reportChecksum": "a69182ec85fd1a4c565123b43d9674390e0194a3c6c1e2cbf5312ed87e713ced",
+        "reportTime": "1645003010083",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+        "deprecationReport": {
+          "id": "PrefixedStorageInfo",
+          "message": "\u0027window.webkitStorageInfo\u0027 is deprecated. Please use \u0027navigator.webkitTemporaryStorage\u0027 or \u0027navigator.webkitPersistentStorage\u0027 instead.",
+          "sourceFile": "https://reporting-api-demo-otel.glitch.me/script.js",
+          "lineNumber": 4,
+          "columnNumber": 8
+        }
+      },
+      "reports": [
+        "a69182ec85fd1a4c565123b43d9674390e0194a3c6c1e2cbf5312ed87e713ced"
+      ]
+    }
+  },
+  {
+    "id": "https://payments.google.com/payments/v4/js/integrator.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "4",
+      "latestSeenTimestamp": "1662642478213",
+      "name": "https://payments.google.com/payments/v4/js/integrator.js",
+      "sample": {
+        "reportChecksum": "c773f9c467df7add268b424203d452c7232e5f700d58c2ed80bf9fbdbbb90d18",
+        "reportTime": "1662642478213",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://ads.google.com/aw/billing/billingsetups?ocid\u003d327542343\u0026euid\u003d63636782\u0026__u\u003d8730137918\u0026uscid\u003d327542343\u0026__c\u003d9264064207\u0026authuser\u003d0\u0026__e\u003d5890755770",
+          "referrer": "https://ads.google.com/nav/selectaccount?euid\u003d63636782\u0026__u\u003d8730137918\u0026authuser\u003d0\u0026dst\u003d/aw/billing/summary\u0026pli\u003d1",
+          "blockedUri": "https://payments.google.com/payments/v4/js/integrator.js",
+          "effectiveDirective": "script-src-elem"
+        }
+      },
+      "reports": [
+        "d8c4a8b145748e8a900742d288daaab238c8a06817c3a0174786bc20ac7ea930",
+        "34e0d34bd30de68fd7dc85161071c7f0702eaa4aba1a13871f8d8a73d932db4c",
+        "e56664657e9dde61ebe978e2af14705ffc9cc67c66012b1ebd64c855bf615051",
+        "c773f9c467df7add268b424203d452c7232e5f700d58c2ed80bf9fbdbbb90d18"
+      ]
+    }
+  },
+  {
+    "id": "trusted-types-sink",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "13",
+      "latestSeenTimestamp": "1662643024048",
+      "name": "trusted-types-sink",
+      "sample": {
+        "reportChecksum": "a8bd176d308bd5e2a77c6adae74eb39be2cdfa43ba62c7a7aec8d6f08083fc56",
+        "reportTime": "1662643024048",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://store.google.com/tw/product/pixel_6_pro/?hl\u003dzh-TW",
+          "referrer": "https://example.org/",
+          "blockedUri": "trusted-types-sink",
+          "sourceFile": "https://www.gstatic.com/store/base/airkit.min.js",
+          "effectiveDirective": "require-trusted-types-for",
+          "lineNumber": 8,
+          "columnNumber": 5025
+        }
+      },
+      "reports": [
+        "248f23d1f0ac82d8c3c8e5f4af85302ee15e268b185cfe1343fdebf09d2d6654",
+        "a8bd176d308bd5e2a77c6adae74eb39be2cdfa43ba62c7a7aec8d6f08083fc56",
+        "b663bc3008f2f681ed2b567ff0d92e717b24b3f274f5a0ad6e2c5e3b75e9f9db",
+        "0c9c9c0c4013791967610153dfd42ba9f8bafe761236b04ec802ae1763d3c4c3",
+        "31b8f835294383ab4a5dee366edbc9aaa555b5054469999adb9ada7bb85233e3",
+        "e1e45275fcb27cffe7a30c01102c25ee7b49c65c9d5877d3165f5d40ad92820a",
+        "7769ca5a35281301aff880a4d5785647db050ea3a4f40bd953503587943a37e7",
+        "f26749df9b24d8de641808a409d545428520b2c15bd28da4618110e2f11c5641",
+        "1d869d86d4027c6014d174f6d15c8d3ad945f0fab450de3f8ef2ea776c7710b6"
+      ]
+    }
+  },
+  {
+    "id": "PrefixedStorageInfo",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1645003010083",
+      "name": "PrefixedStorageInfo",
+      "sample": {
+        "reportChecksum": "a69182ec85fd1a4c565123b43d9674390e0194a3c6c1e2cbf5312ed87e713ced",
+        "reportTime": "1645003010083",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+        "deprecationReport": {
+          "id": "PrefixedStorageInfo",
+          "message": "\u0027window.webkitStorageInfo\u0027 is deprecated. Please use \u0027navigator.webkitTemporaryStorage\u0027 or \u0027navigator.webkitPersistentStorage\u0027 instead.",
+          "sourceFile": "https://reporting-api-demo-otel.glitch.me/script.js",
+          "lineNumber": 4,
+          "columnNumber": 8
+        }
+      },
+      "reports": [
+        "a69182ec85fd1a4c565123b43d9674390e0194a3c6c1e2cbf5312ed87e713ced"
+      ]
+    }
+  },
+  {
+    "id": "4302",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "2",
+      "latestSeenTimestamp": "1662641580816",
+      "name": "4302",
+      "sample": {
+        "reportChecksum": "5cde6452f95c4fcb8ab7d1559fe75cfd6a523646046c1d94bbc5e78ee366113a",
+        "reportTime": "1662641580816",
+        "reportCount": "2",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "4302",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts."
+        }
+      },
+      "reports": [
+        "5cde6452f95c4fcb8ab7d1559fe75cfd6a523646046c1d94bbc5e78ee366113a"
+      ]
+    }
+  },
+  {
+    "id": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "2",
+      "latestSeenTimestamp": "1662642498190",
+      "name": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+      "sample": {
+        "reportChecksum": "bfe1bf2b1b5fb48f2298e54c8c5e61ba0164e824aec3dbaacdc3a20c70b2e56c",
+        "reportTime": "1662642498190",
+        "reportCount": "2",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://console.googletagservices.com/pubconsole/overlay.html",
+          "blockedUri": "https://console.googletagservices.com/pubconsole/js/overlay/overlay.js",
+          "sourceFile": "https://console.googletagservices.com/pubconsole/overlay.html",
+          "effectiveDirective": "script-src-elem",
+          "lineNumber": 21,
+          "columnNumber": 16
+        }
+      },
+      "reports": [
+        "bfe1bf2b1b5fb48f2298e54c8c5e61ba0164e824aec3dbaacdc3a20c70b2e56c"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642489018",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+      "sample": {
+        "reportChecksum": "ec469c1c7484a5607ec025593510d54341a3c2ae495dc48714b4d83ddca41bd4",
+        "reportTime": "1662642489018",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d397753752\u0026cv\u003d9\u0026fst\u003d1662642487983\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY9iCPdHtxgP2iIigAQ\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnqb_znkwrWG6rKANqVVXdgXSRfSiYUfzXA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1OUFZVGVBVUhrYzd5eE5HZVRFNWgzdnZxNFM1LVNlYTBRaDdDT2pHNy1icUNGYzVZY0Vsb09sZw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "ec469c1c7484a5607ec025593510d54341a3c2ae495dc48714b4d83ddca41bd4"
+      ]
+    }
+  },
+  {
+    "id": "PrefixedStorageInfo",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1645003010083",
+      "name": "PrefixedStorageInfo",
+      "sample": {
+        "reportChecksum": "a69182ec85fd1a4c565123b43d9674390e0194a3c6c1e2cbf5312ed87e713ced",
+        "reportTime": "1645003010083",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+        "deprecationReport": {
+          "id": "PrefixedStorageInfo",
+          "message": "\u0027window.webkitStorageInfo\u0027 is deprecated. Please use \u0027navigator.webkitTemporaryStorage\u0027 or \u0027navigator.webkitPersistentStorage\u0027 instead.",
+          "sourceFile": "https://reporting-api-demo-otel.glitch.me/script.js",
+          "lineNumber": 4,
+          "columnNumber": 8
+        }
+      },
+      "reports": [
+        "a69182ec85fd1a4c565123b43d9674390e0194a3c6c1e2cbf5312ed87e713ced"
+      ]
+    }
+  },
+  {
+    "id": "https://payments.google.com/payments/v4/js/integrator.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "4",
+      "latestSeenTimestamp": "1662642478213",
+      "name": "https://payments.google.com/payments/v4/js/integrator.js",
+      "sample": {
+        "reportChecksum": "c773f9c467df7add268b424203d452c7232e5f700d58c2ed80bf9fbdbbb90d18",
+        "reportTime": "1662642478213",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://ads.google.com/aw/billing/billingsetups?ocid\u003d327542343\u0026euid\u003d63636782\u0026__u\u003d8730137918\u0026uscid\u003d327542343\u0026__c\u003d9264064207\u0026authuser\u003d0\u0026__e\u003d5890755770",
+          "referrer": "https://ads.google.com/nav/selectaccount?euid\u003d63636782\u0026__u\u003d8730137918\u0026authuser\u003d0\u0026dst\u003d/aw/billing/summary\u0026pli\u003d1",
+          "blockedUri": "https://payments.google.com/payments/v4/js/integrator.js",
+          "effectiveDirective": "script-src-elem"
+        }
+      },
+      "reports": [
+        "d8c4a8b145748e8a900742d288daaab238c8a06817c3a0174786bc20ac7ea930",
+        "c773f9c467df7add268b424203d452c7232e5f700d58c2ed80bf9fbdbbb90d18",
+        "34e0d34bd30de68fd7dc85161071c7f0702eaa4aba1a13871f8d8a73d932db4c",
+        "e56664657e9dde61ebe978e2af14705ffc9cc67c66012b1ebd64c855bf615051"
+      ]
+    }
+  },
+  {
+    "id": "4302",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "2",
+      "latestSeenTimestamp": "1662641580816",
+      "name": "4302",
+      "sample": {
+        "reportChecksum": "5cde6452f95c4fcb8ab7d1559fe75cfd6a523646046c1d94bbc5e78ee366113a",
+        "reportTime": "1662641580816",
+        "reportCount": "2",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "4302",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts."
+        }
+      },
+      "reports": [
+        "5cde6452f95c4fcb8ab7d1559fe75cfd6a523646046c1d94bbc5e78ee366113a"
+      ]
+    }
+  },
+  {
+    "id": "345",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "5",
+      "latestSeenTimestamp": "1662641831942",
+      "name": "345",
+      "sample": {
+        "reportChecksum": "6bb7e887cae0cc71a1ef4ded39b87982df321012cb8a1de2f1035db9ae95fbe5",
+        "reportTime": "1662641831942",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "345",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts.",
+          "sourceFile": "https://pay.google.com/gp/w/home/activity?sctid\u003d7454553010299587",
+          "lineNumber": 44,
+          "columnNumber": 84
+        }
+      },
+      "reports": [
+        "44c20c85188f7600a70cf0650ed79f2d282026ef8e013289fdb6da9b01b6c1bd",
+        "674f052533cda878febe373058b999f5ece716a5f5ff0065d4e7c86e5d21e968",
+        "82770a48cd0b35325c24fc388d7ce59ad35749e7d4858fff50f05946c62ae0c2",
+        "1c7da6c57f46b55f0829921613f3134f7b22ae3c2d23fa8c0053ea4e9e3c5e51",
+        "6bb7e887cae0cc71a1ef4ded39b87982df321012cb8a1de2f1035db9ae95fbe5"
+      ]
+    }
+  },
+  {
+    "id": "trusted-types-sink",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "13",
+      "latestSeenTimestamp": "1662643024048",
+      "name": "trusted-types-sink",
+      "sample": {
+        "reportChecksum": "a8bd176d308bd5e2a77c6adae74eb39be2cdfa43ba62c7a7aec8d6f08083fc56",
+        "reportTime": "1662643024048",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://store.google.com/tw/product/pixel_6_pro/?hl\u003dzh-TW",
+          "referrer": "https://example.org/",
+          "blockedUri": "trusted-types-sink",
+          "sourceFile": "https://www.gstatic.com/store/base/airkit.min.js",
+          "effectiveDirective": "require-trusted-types-for",
+          "lineNumber": 8,
+          "columnNumber": 5025
+        }
+      },
+      "reports": [
+        "b663bc3008f2f681ed2b567ff0d92e717b24b3f274f5a0ad6e2c5e3b75e9f9db",
+        "0c9c9c0c4013791967610153dfd42ba9f8bafe761236b04ec802ae1763d3c4c3",
+        "31b8f835294383ab4a5dee366edbc9aaa555b5054469999adb9ada7bb85233e3",
+        "248f23d1f0ac82d8c3c8e5f4af85302ee15e268b185cfe1343fdebf09d2d6654",
+        "a8bd176d308bd5e2a77c6adae74eb39be2cdfa43ba62c7a7aec8d6f08083fc56",
+        "7769ca5a35281301aff880a4d5785647db050ea3a4f40bd953503587943a37e7",
+        "e1e45275fcb27cffe7a30c01102c25ee7b49c65c9d5877d3165f5d40ad92820a",
+        "f26749df9b24d8de641808a409d545428520b2c15bd28da4618110e2f11c5641",
+        "1d869d86d4027c6014d174f6d15c8d3ad945f0fab450de3f8ef2ea776c7710b6"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642510618",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+      "sample": {
+        "reportChecksum": "461b474918dcc043b2282356f16c4dc1bcd745ffd69e75f654886d8b612170be",
+        "reportTime": "1662642510618",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "461b474918dcc043b2282356f16c4dc1bcd745ffd69e75f654886d8b612170be"
+      ]
+    }
+  },
+  {
+    "id": "57",
+    "feature": "DEPRECATION",
+    "refactoring": "API_REPLACEMENT",
+    "metadata": {
+      "reportCount": "2",
+      "latestSeenTimestamp": "1662643307992",
+      "name": "57",
+      "sample": {
+        "reportChecksum": "492f3c35382cd1a884f55d0f5318f858c566d070a242e210392eb8c0b2232203",
+        "reportTime": "1662643307992",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "deprecationReport": {
+          "id": "57",
+          "message": "Deprecation messages are stored in the devtools-frontend repo at front_end/models/issues_manager/DeprecationIssue.ts.",
+          "sourceFile": "https://www.gstatic.com/_/pantheon/_/js/k\u003dpantheon.pantheon_module_set.en_US.gt4x9l6BRx8.O/ck\u003dpantheon.pantheon_module_set.4MVQU54tLSQ.L.W.O/am\u003dqIvvBV7fpQue4QHGN432KhwFAIRZwAiynEYAbJEQQGwBApPzD2ggFDG7AoEBBwg/d\u003d0/im\u003d1/rs\u003dADqnUbMfGH28jRxx4SLaNHTVXUzfsHrB_w/m\u003dsy19,sy1b,sy1a,sy1d,sy1c,sy2q,sy3s,sy1e,sy3o,sy5e,sy3t,sy40,sy3x,sy3w,sy10,sy1g,sy1h,sy18,sy16,sy17,sy5f,sy3z,sy7k,sy2t,sy3y,sylw,syny,sy1f,sy1t,sy1v,sy20,sy2c,sy15,sy72,sy7j,sy7o,sy7p,sy7q,sy7r,sy7v,sy19u,sy1i,sy1u,sy21,sy22,sy23,sy13,sy25,sy27,sy28,sy29,sy2b,sy2d,sy2e,sy2f,sy7l,sy7n,sy7s,sy7t,syb7,sygm,syrp,sy19j,sy19t,syf,syg,pm_error_service,sy11,sy12,sy14,sy24,sy26,sy2a,sy2g,sy2h,sy2i,sy2j,sy2k,sy2m,sy2n,sy7m,syb6,syro,syrq,sy19v,sy1bk,pm_pangolin_sandbox,sy1bd,sy1bc,pm_sandbox_route_module",
+          "lineNumber": 1291,
+          "columnNumber": 8
+        }
+      },
+      "reports": [
+        "492f3c35382cd1a884f55d0f5318f858c566d070a242e210392eb8c0b2232203",
+        "b9e99470544b86a56dab3b3e77e53e34989902b34bebca993ad3f895b1e850ba"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642510618",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+      "sample": {
+        "reportChecksum": "461b474918dcc043b2282356f16c4dc1bcd745ffd69e75f654886d8b612170be",
+        "reportTime": "1662642510618",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d253141644\u0026cv\u003d9\u0026fst\u003d1662642509454\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY5GcJcTXtgeC5IaYAQ\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQni_xzJgWEz2eDT6wuGaop_6lErkn76JGMQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1d21mdHpCOWxqclJsRUY2T3ZHLWNTc3VybmhuWUV0cHI3eU1MelVOS1lXMjQ4WEVvQkI5WGNnUQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "461b474918dcc043b2282356f16c4dc1bcd745ffd69e75f654886d8b612170be"
+      ]
+    }
+  },
+  {
+    "id": "https://payments.google.com/payments/v4/js/integrator.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "4",
+      "latestSeenTimestamp": "1662642478213",
+      "name": "https://payments.google.com/payments/v4/js/integrator.js",
+      "sample": {
+        "reportChecksum": "c773f9c467df7add268b424203d452c7232e5f700d58c2ed80bf9fbdbbb90d18",
+        "reportTime": "1662642478213",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://ads.google.com/aw/billing/billingsetups?ocid\u003d327542343\u0026euid\u003d63636782\u0026__u\u003d8730137918\u0026uscid\u003d327542343\u0026__c\u003d9264064207\u0026authuser\u003d0\u0026__e\u003d5890755770",
+          "referrer": "https://ads.google.com/nav/selectaccount?euid\u003d63636782\u0026__u\u003d8730137918\u0026authuser\u003d0\u0026dst\u003d/aw/billing/summary\u0026pli\u003d1",
+          "blockedUri": "https://payments.google.com/payments/v4/js/integrator.js",
+          "effectiveDirective": "script-src-elem"
+        }
+      },
+      "reports": [
+        "d8c4a8b145748e8a900742d288daaab238c8a06817c3a0174786bc20ac7ea930",
+        "34e0d34bd30de68fd7dc85161071c7f0702eaa4aba1a13871f8d8a73d932db4c",
+        "c773f9c467df7add268b424203d452c7232e5f700d58c2ed80bf9fbdbbb90d18",
+        "e56664657e9dde61ebe978e2af14705ffc9cc67c66012b1ebd64c855bf615051"
+      ]
+    }
+  },
+  {
+    "id": "https://www.youtube.com/iframe_api",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "7",
+      "latestSeenTimestamp": "1662643024049",
+      "name": "https://www.youtube.com/iframe_api",
+      "sample": {
+        "reportChecksum": "d46b3bd64a41b317c5277b24d12866289098e2099014d093192c7fa8ad842bc2",
+        "reportTime": "1662643024049",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://store.google.com/tw/product/pixel_6_pro/?hl\u003dzh-TW",
+          "referrer": "https://example.org/",
+          "blockedUri": "https://www.youtube.com/iframe_api",
+          "sourceFile": "https://www.gstatic.com/store/base/airkit.min.js",
+          "effectiveDirective": "script-src-elem",
+          "lineNumber": 8,
+          "columnNumber": 5101
+        }
+      },
+      "reports": [
+        "29be8dbe65b0e746a35bf7d35f82ea54f5094083b59240fc2d0402096270f95b",
+        "343aec814f89b6c8ab3d9113d9645c889a41c2452bb132b682290255e65f721c",
+        "d46b3bd64a41b317c5277b24d12866289098e2099014d093192c7fa8ad842bc2",
+        "c6a116483eed57d4ea1d5f35a1dacb3c3bfb9d198dbc04762a8e1b2c0a5d20b2",
+        "76e29ad79718c149734e896524f5c4f6a6c6df4418e81ac4201be56766635a91",
+        "9dab6a5efae6a609c598ab8e805c0d4af498c2309e4d6b40f883faa9af2962e9",
+        "8f2a16ea2de1fc944cef5e1246ae68836f9774f68fca70ff64d1401317edf86c"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642489064",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+      "sample": {
+        "reportChecksum": "82e1af54f04799a9fcaabe2402bd42a66ca16afb0d7e1b8044450136541f8fc0",
+        "reportTime": "1662642489064",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d94091977\u0026cv\u003d9\u0026fst\u003d1662642487979\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dN-kZY-_1PJTI1fAP2IaRyA4\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQno9JNgM7fpSO6ex-aexzHzf78SppvVttzA\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI0X19KMUJQNjA4SkhSWmFfY2JkZkFBaDNSMURPdE1nWl9OLXZMb2ZkNTlIRkwtRHk0TDZEMWVDdw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "82e1af54f04799a9fcaabe2402bd42a66ca16afb0d7e1b8044450136541f8fc0"
+      ]
+    }
+  },
+  {
+    "id": "https://example.com/script.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1645002999103",
+      "name": "https://example.com/script.js",
+      "sample": {
+        "reportChecksum": "8274dd63f32fd5209ae72c12d852a6ad4f0acdb7a1799fbd715e1e196e5720b5",
+        "reportTime": "1645002999103",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://reporting-api-demo-otel.glitch.me/page",
+          "referrer": "https://glitch.com/",
+          "blockedUri": "https://example.com/script.js",
+          "effectiveDirective": "script-src-elem"
+        }
+      },
+      "reports": [
+        "8274dd63f32fd5209ae72c12d852a6ad4f0acdb7a1799fbd715e1e196e5720b5"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642579174",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+      "sample": {
+        "reportChecksum": "08b36d294cf2be2a89c9eae99a22e5f01a9e39fdbc36f03abc9932707ad57e30",
+        "reportTime": "1662642579174",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d297298537\u0026cv\u003d9\u0026fst\u003d1662642577822\u0026num\u003d1\u0026value\u003d0\u0026label\u003dBhP5CLP35bUBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY6CeO6O21fAP3tax8Ao\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQngz0XxsSIR90lSUe5ugR2qtsfsEBSzdj_w\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2MTM4VlczVjlDZUFfLUIzUFpIcmRvUXFPU2w5Y0d5QU5XOTgzdVBKMGt4eVRjUkVpNGNCVUtVUQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "08b36d294cf2be2a89c9eae99a22e5f01a9e39fdbc36f03abc9932707ad57e30"
+      ]
+    }
+  },
+  {
+    "id": "https://example.com/script.js",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1645002999103",
+      "name": "https://example.com/script.js",
+      "sample": {
+        "reportChecksum": "8274dd63f32fd5209ae72c12d852a6ad4f0acdb7a1799fbd715e1e196e5720b5",
+        "reportTime": "1645002999103",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://reporting-api-demo-otel.glitch.me/page",
+          "referrer": "https://glitch.com/",
+          "blockedUri": "https://example.com/script.js",
+          "effectiveDirective": "script-src-elem"
+        }
+      },
+      "reports": [
+        "8274dd63f32fd5209ae72c12d852a6ad4f0acdb7a1799fbd715e1e196e5720b5"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642579171",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+      "sample": {
+        "reportChecksum": "07f214578b6dff1b6718e4f776143baa3b3d2cccf7f1301148f45e644d5fffce",
+        "reportTime": "1662642579171",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d1274113501\u0026cv\u003d9\u0026fst\u003d1662642577810\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dkekZY-meO4-ttwfFwqWgCg\u0026sscte\u003d1\u0026crd\u003d\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnvA3oHMH4slMmO47Nm3M5GzdCnfThz8tBg\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI2TTlIOGV6bms5ZHBKMDZ1bWhtQlNVLWkxMEpIRFN3Mk9uWXpBbzhsRGc5SnJSYlFGemw0ZU0xQQ",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "07f214578b6dff1b6718e4f776143baa3b3d2cccf7f1301148f45e644d5fffce"
+      ]
+    }
+  },
+  {
+    "feature": "CSP",
+    "refactoring": "CSP_EVAL",
+    "metadata": {
+      "reportCount": "187",
+      "latestSeenTimestamp": "1662643285094",
+      "sample": {
+        "reportChecksum": "00fbd798124af5e2771c7d5951a133acc24e828dddbaba937516de22e48c2d0c",
+        "reportTime": "1662643285094",
+        "reportCount": "26",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "REPORTING",
+        "cspReport": {
+          "documentUri": "https://fi.google.com/account?pli\u003d1",
+          "referrer": "https://example.org/",
+          "blockedUri": "eval",
+          "effectiveDirective": "script-src",
+          "lineNumber": 1,
+          "columnNumber": 96
+        }
+      },
+      "reports": [
+        "04f688ddfc3762cce0a05f24f2cf31fc070149f26cf6fc6e7b3113f98492cb88",
+        "d1f22e7a8067b16459303066a5e99fdb72c9be761a38920f2b607dce56f6e459",
+        "0ec65b4515d953c2722331e23fe4750380a676993b19120782823dc375976b37",
+        "6e39089fff483edb6a24716266d2fb33f1bfbb63d67cf56e4b76196e7efd3af4",
+        "22f5e27325332c3c092bb3b4d1131f0460a2f64765f2c97881e1fecc04c08c03",
+        "09133d49d76e84035b04440ca954a44c7905926131d9948f4aca94c0599b5ba5",
+        "0a14436ff8c76808dc0f3571553ec06687aa8a3a3d522c2dfc4b44fdc6ed37ab",
+        "13a2f60c52e3e603282a79e6992ee061e38e40d60c42ccabee7068093dd53b20",
+        "392e80c9bfb9ea1d9b027f4de90f2c7416e4bc065e8cf1b7ca232c713b41e495",
+        "024c5ddc3f18069f4d99a2bd18af562645abb8c2c488655534ed0a5a9cc974bc",
+        "00fbd798124af5e2771c7d5951a133acc24e828dddbaba937516de22e48c2d0c"
+      ]
+    }
+  },
+  {
+    "id": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+    "feature": "CSP",
+    "refactoring": "CSP_URL",
+    "metadata": {
+      "reportCount": "1",
+      "latestSeenTimestamp": "1662642510645",
+      "name": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+      "sample": {
+        "reportChecksum": "46e8dd50dcc04f46fd1fd3db274adb76ec637bdea4d9a64092100ed82be1abb6",
+        "reportTime": "1662642510645",
+        "reportCount": "1",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        "disposition": "ENFORCED",
+        "cspReport": {
+          "documentUri": "https://www.waze.com/ads/es/get-started/",
+          "blockedUri": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/948191286/?random\u003d324391185\u0026cv\u003d9\u0026fst\u003d1662642509448\u0026num\u003d1\u0026value\u003d0\u0026label\u003dowLACIXY-7UBELaAkcQD\u0026bg\u003dffffff\u0026guid\u003dON\u0026resp\u003dGooglemKTybQhCsO\u0026u_h\u003d1406\u0026u_w\u003d2560\u0026u_ah\u003d1358\u0026u_aw\u003d2560\u0026u_cd\u003d24\u0026u_his\u003d2\u0026u_tz\u003d120\u0026u_java\u003dfalse\u0026u_nplug\u003d5\u0026u_nmime\u003d2\u0026gtm\u003d2wg970\u0026sendb\u003d1\u0026ig\u003d1\u0026frm\u003d0\u0026url\u003dhttps%3A%2F%2Fwww.waze.com%2Fads%2Fes%2Fget-started%2F\u0026tiba\u003dWaze%20Ads%C2%A0-%C2%A0Atrae%20M%C3%A1s%20Clientes%20a%20Tu%20Negocio%20Con%20Publicidad%20F%C3%A1cil%20de%20Usar\u0026auid\u003d1971033824.1662642488\u0026hn\u003dwww.googleadservices.com\u0026async\u003d1\u0026fmt\u003d3\u0026ctc_id\u003dCAIVAgAAAB0CAAAA\u0026ct_cookie_present\u003dfalse\u0026ocp_id\u003dTekZY9-6JMe41fAPxIWqqAU\u0026sscte\u003d1\u0026crd\u003dCJqqsQI\u0026eitems\u003dChAI8KXmmAYQy9P6m-u4i8UYEh0AzvEQnpBozBbZ80p9EneHyCpRBilE-ocT63ZhXQ\u0026pscrd\u003dEk5DaEFJOEtYbW1BWVF6cS10N0pUTmlkRkNFaVlBeUdpLXBSM2laRDJaZENfX3BIR1AyN001Qm1zRkU0WjJwXy15a2xfdWtPNzZNTUlHSlEaWkNoRUk4S1htbUFZUXpJS1AtY0Q3cXFxOEFSSXVBQkMtenI1X3Ryc0hCOHR3Um1SdkRQeHhSYi1nZ3p5ajhRWUxXX05pUWRmWjBlbHFDNXNEVlZtbkwwWlNVdw",
+          "effectiveDirective": "img-src"
+        }
+      },
+      "reports": [
+        "46e8dd50dcc04f46fd1fd3db274adb76ec637bdea4d9a64092100ed82be1abb6"
+      ]
+    }
   }
-}
 ]
