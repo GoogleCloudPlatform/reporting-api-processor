@@ -1,0 +1,52 @@
+syntax = "proto3";
+package constellations;
+
+import "security_report.proto";
+
+message Constellation {
+  // a unique string representing this constellation
+  string id = 1;
+
+  enum Feature {
+    FEATURE_UNKNOWN = 0;
+    CSP = 1;
+    DEPRECATION = 2;
+  }
+  Feature feature = 2;
+
+  enum Refactoring {
+    REFACTORING_UNKNOWN = 0;
+    // Deprecation: an API must be replaced with another
+    API_REPLACEMENT = 1;
+
+    // CSP: inline javascript (event handlers, etc)
+    CSP_INLINE = 2;
+    // CSP: forbidden usages of eval()
+    CSP_EVAL = 3;
+    // CSP: forbidden framing
+    CSP_FRAME_ANCESTORS = 4;
+
+    // CSP: sourcing scripts from forbidden origins
+    CSP_URL = 5;
+  }
+
+  // the type of refactoring needed to solve this family of issues
+  Refactoring refactoring = 3;
+
+  // this constellation's aggregated properties
+  ConstellationMetadata metadata = 4;
+}
+
+message ConstellationMetadata {
+  // how many reports are in this constellation
+  int64 report_count = 1;
+  // max(timestamp) of individual reports
+  int64 latest_seen_timestamp = 2;
+  // identifies this cluster by an arbitrary name; common names can be script
+  // samples or URLs
+  string name = 3;
+  // a report sample representing this group of reports
+  reports.SecurityReport sample = 4;
+  // a set of checksums pointing to reports in this constellation
+  repeated string reports = 5;
+}

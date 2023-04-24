@@ -1,0 +1,30 @@
+syntax = "proto3";
+package reports;
+
+message CspReport {
+  // The URI of the document in which the violation occurred.
+   string document_uri = 4;
+  // The referrer of the document in which the violation occurred.
+   string referrer = 5;
+  // The URI of the resource that was blocked from loading by the
+  // Content Security Policy. If the blocked URI is from a different
+  // origin than the document-uri, then the blocked URI is truncated
+  // to contain just the scheme, host, and port.
+   string blocked_uri = 6;
+  // The name of the policy section that was violated.
+   string violated_directive = 7;
+  // The name of the policy directive that was violated.
+   string effective_directive = 15;
+  // The original policy as specified by the CSP HTTP header:
+  // Content-Security-Policy, X-Content-Security-Policy (IE),
+  // X-Webkit-CSP (old Safari, old Chrome).
+   string original_policy = 8;
+  // The URL of the resource where the violation occurred.
+   string source_file = 9;
+  // The line number in source-file on which the violation occurred, 1-based.
+   int32 line_number = 31;
+  // The column number in source-file on which the violation occurred, 1-based.
+   int32 column_number = 32;
+  // A snippet of the rejected script (first 40 bytes).
+   string script_sample = 21;
+}
