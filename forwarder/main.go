@@ -80,7 +80,7 @@ func main() {
 		port = "8080"
 	}
 	if err := e.Start(":" + port); err != nil {
-		log.Fatalf("failure occured on launching HTTP server: %v", err)
+		log.Fatalf("failure occurred on launching HTTP server: %v", err)
 	}
 }
 

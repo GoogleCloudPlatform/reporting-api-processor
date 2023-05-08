@@ -18,6 +18,7 @@ set -ex
 
 SERVICE="forwarder"
 PROJECT=$(gcloud config get-value project)
+INSTANCE=$(gcloud bigtable instances list --format="value(name)")
 export KO_DOCKER_REPO="asia-south1-docker.pkg.dev/${PROJECT}/forwarder"
 
 gcloud run deploy ${SERVICE} \
@@ -26,7 +27,7 @@ gcloud run deploy ${SERVICE} \
 --allow-unauthenticated \
 --no-cpu-throttling \
 --set-env-vars "BT_PROJECT=${PROJECT}" \
---set-env-vars "BT_INSTANCE=security-report-instance"
+--set-env-vars "BT_INSTANCE=${INSTANCE}"
 
 URL=$(gcloud run services describe ${SERVICE} --format="value(status.address.url)")
 curl -X GET ${URL}/_healthz
