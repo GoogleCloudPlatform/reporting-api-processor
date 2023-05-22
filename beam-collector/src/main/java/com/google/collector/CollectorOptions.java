@@ -11,7 +11,7 @@ import org.apache.beam.sdk.options.Validation.Required;
 public interface CollectorOptions extends PipelineOptions {
 
   @Description("Whether to load reports from BigTable")
-  @Default.Boolean(false)
+  @Default.Boolean(true)
   boolean getLoadFromBigTable();
 
   void setLoadFromBigTable(boolean value);
