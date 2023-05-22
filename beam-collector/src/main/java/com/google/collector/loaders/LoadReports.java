@@ -16,7 +16,14 @@ import org.apache.beam.sdk.transforms.ParDo;
 import org.apache.beam.sdk.values.PCollection;
 import reports.SecurityReportOuterClass.SecurityReport;
 
-public class LoadReports {
+/**
+ * Factory class used to load pre-defined transforms that can read raw Reporting API reports from
+ * various data sources.
+ */
+public final class LoadReports {
+
+  private LoadReports() {}
+
   public static PCollection<SecurityReport> fromCsv(Pipeline p, String inputFile) {
     return p.apply("LoadFromCsv", TextIO.read().from(inputFile))
         .apply("CsvToReports", ParDo.of(new LoadFromCsv()));

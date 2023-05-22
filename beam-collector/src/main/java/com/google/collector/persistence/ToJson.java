@@ -9,6 +9,10 @@ import org.apache.beam.sdk.transforms.ParDo;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PDone;
 
+/**
+ * Implementation of JSON sink. This class allows the pipeline to write output constellations to
+ * JSON files in the local file system.
+ */
 class ToJson extends PersistenceTransform {
 
   private final String outputFilePath;

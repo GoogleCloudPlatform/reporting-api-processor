@@ -6,7 +6,13 @@ import reports.CspReportOuterClass.CspReport;
 import reports.DeprecationReportOuterClass.DeprecationReport;
 import reports.SecurityReportOuterClass.SecurityReport;
 
-class ExtractClusterKey extends DoFn<SecurityReport, KV<String, SecurityReport>> {
+/**
+ * Transform used to build cluster keys from individual reports. Cluster keys are built from key
+ * report fields. The set of fields used to create a given key depends on the type of report.
+ * Whenever two or more reports share the same cluster key, they will be grouped together by this
+ * pipeline.
+ */
+final class ExtractClusterKey extends DoFn<SecurityReport, KV<String, SecurityReport>> {
 
   @ProcessElement
   public void processElement(ProcessContext ctx) {

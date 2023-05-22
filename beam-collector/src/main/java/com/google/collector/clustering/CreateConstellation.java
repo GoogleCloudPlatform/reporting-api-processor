@@ -10,6 +10,10 @@ import org.apache.beam.sdk.values.KV;
 import reports.CspReportOuterClass.CspReport;
 import reports.SecurityReportOuterClass.SecurityReport;
 
+/**
+ * This transform aggregates reports that share the same root cause and computes useful metrics that
+ * can help determine whether this root cause is actionable.
+ */
 class CreateConstellation extends DoFn<KV<String, Iterable<SecurityReport>>, Constellation> {
 
   @ProcessElement

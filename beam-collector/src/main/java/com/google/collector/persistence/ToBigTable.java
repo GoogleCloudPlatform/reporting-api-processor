@@ -5,16 +5,18 @@ import com.google.cloud.bigtable.beam.CloudBigtableTableConfiguration;
 import constellations.ConstellationOuterClass.Constellation;
 import org.apache.beam.sdk.transforms.DoFn;
 import org.apache.beam.sdk.transforms.ParDo;
-import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PDone;
 import org.apache.hadoop.hbase.client.Mutation;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hbase.thirdparty.com.google.gson.Gson;
-import reports.SecurityReportOuterClass.SecurityReport;
 
-public class ToBigTable extends PersistenceTransform {
+/**
+ * Implementation of BigTable sink. This class allows the pipeline to write output constellations to
+ * BigTable.
+ */
+final class ToBigTable extends PersistenceTransform {
 
   private final CloudBigtableTableConfiguration bigtableTableConfig;
 

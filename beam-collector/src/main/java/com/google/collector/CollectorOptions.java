@@ -5,6 +5,9 @@ import org.apache.beam.sdk.options.Description;
 import org.apache.beam.sdk.options.PipelineOptions;
 import org.apache.beam.sdk.options.Validation.Required;
 
+/**
+ * Command-line arguments to the Collector pipeline.
+ */
 public interface CollectorOptions extends PipelineOptions {
 
   @Description("Whether to load reports from BigTable")
@@ -20,7 +23,6 @@ public interface CollectorOptions extends PipelineOptions {
   void setOutputToBigTable(boolean value);
 
   @Description("Path of the file to read from")
-  @Default.String("gs://stargazing-collector-bucket/sample-csp-reports.csv")
   String getInputFile();
 
   void setInputFile(String value);

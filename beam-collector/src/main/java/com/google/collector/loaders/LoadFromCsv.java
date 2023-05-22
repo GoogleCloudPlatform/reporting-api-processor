@@ -8,39 +8,11 @@ import org.apache.beam.sdk.transforms.DoFn;
 import reports.CspReportOuterClass.CspReport;
 import reports.SecurityReportOuterClass.SecurityReport.Disposition;
 
-// Prototype CSP reports are exported as
-// 0: report_id
-// 1: report_time
-// 2: domain
-// 3: document_uri
-// 4: referrer
-// 5: blocked_uri
-// 6: violated_directive
-// 7: original_policy
-// 8: source_file
-// 9: csp_version
-// 10: user_agent
-// 11: product_name
-// 12: version
-// 13: effective_directive
-// 14: browser
-// 15: violation_candidates
-// 16: original_report_uris
-// 17: metadata
-// 18: count
-// 19: script_sample
-// 20: disposition
-// 21: blocked_uri_domain
-// 22: noise_info
-// 23: policy_with_strict_dynamic
-// 24: blocked_uri_domain_google_owned
-// 25: policy_type
-// 26: policy_with_unsafe_eval
-// 27: source_file_domain
-// 28: source_file_domain_google_owned
-// 29: line_number
-// 30: column_number
-class LoadFromCsv extends DoFn<String, SecurityReport> {
+/**
+ * This transform can load reports from CSV files used during debugging. The CSV representation of
+ * reports is discouraged in production.
+ */
+final class LoadFromCsv extends DoFn<String, SecurityReport> {
 
   @ProcessElement
   public void processElement(ProcessContext ctx) throws IllegalArgumentException {

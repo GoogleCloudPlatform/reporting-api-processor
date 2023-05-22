@@ -9,6 +9,11 @@ import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
 import reports.SecurityReportOuterClass.SecurityReport;
 
+/**
+ * Transform used to aggregate and de-duplicate reports together. This class builds a unique
+ * identifier from individual reports. Reports that share the same identifier are likely to be
+ * repeated violations of the same root cause and can be safely discarded.
+ */
 public class Aggregate extends PTransform<PCollection<SecurityReport>, PCollection<SecurityReport>> {
 
   @Override
@@ -22,6 +27,7 @@ public class Aggregate extends PTransform<PCollection<SecurityReport>, PCollecti
   }
 
   static class DeDuplicate extends DoFn<KV<Long, Iterable<SecurityReport>>, SecurityReport> {
+
     @ProcessElement
     public void processElement(ProcessContext ctx) {
       KV<Long, Iterable<SecurityReport>> element = ctx.element();

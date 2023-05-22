@@ -1,17 +1,18 @@
 package com.google.collector.aggregation;
 
-import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.Adler32;
 import org.apache.beam.sdk.transforms.DoFn;
 import org.apache.beam.sdk.values.KV;
 import reports.CspReportOuterClass.CspReport;
-import reports.DeprecationReportOuterClass;
 import reports.DeprecationReportOuterClass.DeprecationReport;
 import reports.SecurityReportOuterClass.SecurityReport;
 
-class ExtractKey extends DoFn<SecurityReport, KV<Long, SecurityReport>> {
+/**
+ * Uses the adler32 algorithm to product per-violation checksums.
+ */
+final class ExtractKey extends DoFn<SecurityReport, KV<Long, SecurityReport>> {
 
   private static final Pattern NONCE_PATTERN = Pattern.compile("'nonce-.+?'");
 
