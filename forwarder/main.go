@@ -117,7 +117,7 @@ func mainHandler(c echo.Context) error {
 		reportCh <- mapToSecurityReport(c.Logger(), b)
 	}
 
-	return c.String(http.StatusOK, "OK")
+	return c.String(http.StatusNoContent, "OK")
 }
 
 func reportWriter(ctx context.Context, ch chan *securityreport.SecurityReport) {
