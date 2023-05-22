@@ -21,13 +21,14 @@ message Constellation {
 
     // CSP: inline javascript (event handlers, etc)
     CSP_INLINE = 2;
-    // CSP: forbidden usages of eval()
     CSP_EVAL = 3;
-    // CSP: forbidden framing
     CSP_FRAME_ANCESTORS = 4;
-
-    // CSP: sourcing scripts from forbidden origins
+    CSP_STYLE = 6;
+    CSP_MEDIA = 7;
     CSP_URL = 5;
+
+    // Trusted Types
+    TRUSTED_TYPES_SINK = 8;
   }
 
   // the type of refactoring needed to solve this family of issues

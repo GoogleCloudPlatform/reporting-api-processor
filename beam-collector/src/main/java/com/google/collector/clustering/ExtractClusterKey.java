@@ -28,6 +28,7 @@ class ExtractClusterKey extends DoFn<SecurityReport, KV<String, SecurityReport>>
     }
 
     if (key == null) {
+      // TODO: a new report type that we don't support has been found - report it
       return;
     }
 
@@ -36,8 +37,12 @@ class ExtractClusterKey extends DoFn<SecurityReport, KV<String, SecurityReport>>
 
   private String buildClusterKeyForCsp(CspReport cspReport) {
     // inline and eval are grouped by script sample, otherwise group by blocked URI
-    return cspReport.getBlockedUri().equals("inline") || cspReport.getBlockedUri().equals("eval")
-        ? cspReport.getScriptSample()
-        : cspReport.getBlockedUri();
+    if (cspReport.getBlockedUri().equals("inline") || cspReport.getBlockedUri().equals("eval")) {
+      String scriptSample = cspReport.getScriptSample();
+      return scriptSample.isBlank() || scriptSample.isEmpty() ? cspReport.getDocumentUri() : scriptSample;
+    }
+
+    // if there is not blocked-uri,
+    return cspReport.getBlockedUri();
   }
 }

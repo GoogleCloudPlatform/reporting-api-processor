@@ -61,8 +61,14 @@ class CreateConstellation extends DoFn<KV<String, Iterable<SecurityReport>>, Con
           return Refactoring.CSP_EVAL;
         } else if (cspReport.getBlockedUri().equals("inline")) {
           return Refactoring.CSP_INLINE;
-        } else if (cspReport.getViolatedDirective().equals("frame-ancestors")) {
+        } else if (cspReport.getEffectiveDirective().equals("frame-ancestors") || cspReport.getEffectiveDirective().equals("frame-src")) {
           return Refactoring.CSP_FRAME_ANCESTORS;
+        } else if (cspReport.getEffectiveDirective().startsWith("style-src")) {
+          return Refactoring.CSP_STYLE;
+        } else if (cspReport.getEffectiveDirective().startsWith("img-src")) {
+          return Refactoring.CSP_MEDIA;
+        } else if (cspReport.getEffectiveDirective().equals("require-trusted-types-for")) {
+          return Refactoring.TRUSTED_TYPES_SINK;
         } else {
           return Refactoring.CSP_URL;
         }
