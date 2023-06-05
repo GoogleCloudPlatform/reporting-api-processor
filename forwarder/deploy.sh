@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2022 Yoshi Yamaguchi
+# Copyright 2022 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@ set -ex
 SERVICE="forwarder"
 PROJECT=$(gcloud config get-value project)
 INSTANCE=$(gcloud bigtable instances list --format="value(name)")
-export KO_DOCKER_REPO="asia-south1-docker.pkg.dev/${PROJECT}/forwarder"
 
 gcloud run deploy ${SERVICE} \
 --image $(ko publish .) \
