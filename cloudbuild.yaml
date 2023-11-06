@@ -24,7 +24,7 @@ steps:
       cd forwarder
       echo $(/workspace/ko build .) > /workspace/forwarder-container.txt || exit 1
     env:
-      - KO_DOCKER_REPO=asia-east1-docker.pkg.dev/yoshifumi-demo/demo-container
+      - KO_DOCKER_REPO=REPLACE_WITH_YOUR_CONTAINER_REGISTRY
 
   - name: "ubuntu"
     script: |
